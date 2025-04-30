@@ -1,0 +1,99 @@
+@import url(/Components/css/collection.css);
+@import url(/Components/css/hotoffers.css);
+@import url(/Components/css/about.css);
+@import url(/Components/css/contact.css);
+@import url(/Components/css/cart.css);
+
+
+
+
+
+
+
+
+
+
+/* Add to your stylesheet */
+.nav-item .badge {
+    font-size: 0.65rem;
+    padding: 0.25em 0.4em;
+    transform: translate(50%, -50%);
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.lobster-regular {
+
+    font-family: "Lobster", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.libre-baskerville-bold {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.image-responsive img {
+    object-fit: cover;
+    
+    border-radius: 5px;
+}
+
+.rounded-gola {
+    width: 424px;
+    object-fit: cover;
+    border-radius: 10px 10px 0px 0px;
+    height: 300px;
+
+}
+.object-cover{
+    object-fit: cover;
+}
+
+.modern-cards{
+    width: 420px;
+    height: 540px !important;
+
+}
+.modern-cards img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.flex-center-align{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+.margin-top-bottom{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.carouselbannerImages{
+    border-radius: 10px;
+}
+.carouselbannerImages img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.flex-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5em;
+    justify-content: center;
+    align-content: center;
+}
+.border-radius{
+    border-radius: 5px 5px 0px 0px;
+}

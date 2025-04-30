@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="Buy Nowport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Standard favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="/favicon_io/favicon.ico">
+
+  <!-- Apple Touch Icon (for iPhone, iPad) -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+
+  <!-- Android Chrome Icons -->
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon_io/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon_io/android-chrome-512x512.png">
+
+  <!-- Web Manifest (optional but pro-level for PWA apps) -->
+  <link rel="manifest" href="/favicon_io/site.webmanifest">
+
+
+
+  <!-- Theme Colors (for Chrome, Edge, Mobile browsers) -->
+  <meta name="theme-color" content="#ffffff">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="/browserconfig.xml">
+
+
+
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lobster&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Righteous&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lobster&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Righteous&display=swap"
+    rel="stylesheet">
+  <title>Hot Offers</title>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand lobster-regular" href="/index.html">Mosaic</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 libre-baskerville-bold">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/Components/html/collection.html">Collections</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Components/html/hotoffers.html">Hot Offers</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/Components/html/about.html">About Us</a></li>
+              <li><a class="dropdown-item" href="/Components/html/contact.html">Contact Us</a></li>
+            </ul>
+          </li>
+          <li class="nav-item position-relative">
+            <a class="nav-link" href="/Components/html/cart.html">
+              <i class="bi bi-cart"></i>
+              <span id="cartCount"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                style="display: none;">
+                0
+              </span>
+              <span>Cart</span>
+            </a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+          <button class="btn btn-outline-success" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <!-- Hot Offers Section -->
+  <!-- Image Carousel Section -->
+  <section class="hero-carousel mb-5 ">
+    <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://fashionpanti.com/wp-content/uploads/2024/08/Grey-Minimalist-Special-Offer-Banner-Landscape_20240729_094317_0000.png"
+            class="d-block w-100" alt="Sale 1">
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://img.freepik.com/free-psd/fashion-template-design_23-2151238120.jpg?t=st=1745960260~exp=1745963860~hmac=4874da2678b65a500e75d7cd88eabc7cdb85697602f188ac35acb8d2b5d5b87a&w=1380"
+            class="d-block w-100" alt="Sale 2">
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://img.freepik.com/free-psd/flat-design-fashion-template_23-2150055199.jpg?t=st=1745960335~exp=1745963935~hmac=5d9bd08ade934a764f864ce86432d309167eddd75e32fc979ec4206328b97592&w=1380"
+            class="d-block w-100" alt="Sale 3">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Hot Offers Cards Section -->
+  <section class="hot-offers py-5">
+    <div class="container">
+      <h2 class="text-center mb-5 fw-bold">Today's Hot Offers</h2>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+        <!-- Card 1 - Summer Dress -->
+        <div class="col">
+          <div class="card h-100 border-0 product-card">
+            <span class="position-absolute top-0 end-0 bg-danger text-white px-2 py-1 m-2 rounded">50% OFF</span>
+            <img
+              src="https://media1.popsugar-assets.com/files/thumbor/zvdPA4DRjOwiZe4tpT_udMCePVg=/fit-in/792x1190/filters:format_auto():upscale()/2023/05/11/713/n/1922564/c207bb40d43e6fe4_netimgAF5n1Z.png"
+              class="card-img-top" alt="Summer Dress">
+            <div class="card-img-overlay d-flex flex-column justify-content-end p-0 overlay-content">
+              <div class="bg-white p-3 overlay-inner">
+                <h5 class="card-title mb-1">Summer Dress</h5>
+                <p class="card-text mb-2">
+                  <span class="text-danger fw-bold">₹1,499</span>
+                  <span class="text-decoration-line-through text-muted ms-2">₹2,999</span>
+                </p>
+                <button class="btn btn-dark btn-sm w-100 add-to-cart" data-id="offer001" data-name="Summer Dress"
+                  data-price="1499" data-original-price="2999"
+                  data-image="https://media1.popsugar-assets.com/files/thumbor/zvdPA4DRjOwiZe4tpT_udMCePVg=/fit-in/792x1190/filters:format_auto():upscale()/2023/05/11/713/n/1922564/c207bb40d43e6fe4_netimgAF5n1Z.png">
+                  <i class="bi bi-cart-plus me-1"></i> Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 - Casual Shirt -->
+        <div class="col">
+          <div class="card h-100 border-0 product-card">
+            <span class="position-absolute top-0 end-0 bg-danger text-white px-2 py-1 m-2 rounded">60% OFF</span>
+            <img
+              src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/28219632/2024/3/12/2f53aaab-40e1-4c5b-8148-6ad150e5f4341710256687634CampusSutraMenClassicOpaqueCheckedCasualShirt2.jpg"
+              class="card-img-top" alt="Casual Shirt">
+            <div class="card-img-overlay d-flex flex-column justify-content-end p-0 overlay-content">
+              <div class="bg-white p-3 overlay-inner">
+                <h5 class="card-title mb-1">Casual Shirt</h5>
+                <p class="card-text mb-2">
+                  <span class="text-danger fw-bold">₹999</span>
+                  <span class="text-decoration-line-through text-muted ms-2">₹2,499</span>
+                </p>
+                <button class="btn btn-dark btn-sm w-100 add-to-cart" data-id="offer002" data-name="Casual Shirt"
+                  data-price="999" data-original-price="2499"
+                  data-image="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/28219632/2024/3/12/2f53aaab-40e1-4c5b-8148-6ad150e5f4341710256687634CampusSutraMenClassicOpaqueCheckedCasualShirt2.jpg">
+                  <i class="bi bi-cart-plus me-1"></i> Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 - Formal Shoes -->
+        <div class="col">
+          <div class="card h-100 border-0 product-card">
+            <span class="position-absolute top-0 end-0 bg-danger text-white px-2 py-1 m-2 rounded">40% OFF</span>
+            <img src="https://fausto.in/cdn/shop/products/FST_FOSMF-2046_TAN_1-MOOD.jpg?v=1683105956"
+              class="card-img-top" alt="Formal Shoes">
+            <div class="card-img-overlay d-flex flex-column justify-content-end p-0 overlay-content">
+              <div class="bg-white p-3 overlay-inner">
+                <h5 class="card-title mb-1">Formal Shoes</h5>
+                <p class="card-text mb-2">
+                  <span class="text-danger fw-bold">₹2,499</span>
+                  <span class="text-decoration-line-through text-muted ms-2">₹4,999</span>
+                </p>
+                <button class="btn btn-dark btn-sm w-100 add-to-cart" data-id="offer003" data-name="Formal Shoes"
+                  data-price="2499" data-original-price="4999"
+                  data-image="https://fausto.in/cdn/shop/products/FST_FOSMF-2046_TAN_1-MOOD.jpg?v=1683105956">
+                  <i class="bi bi-cart-plus me-1"></i> Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 - Handbag -->
+        <div class="col">
+          <div class="card h-100 border-0 product-card">
+            <span class="position-absolute top-0 end-0 bg-danger text-white px-2 py-1 m-2 rounded">30% OFF</span>
+            <img
+              src="https://rukminim2.flixcart.com/image/850/1000/xif0q/hand-messenger-bag/j/v/u/exotic610-11-2-hb-610-handbag-exotic-8-5-original-imagrqrjd3zph2ne.jpeg?q=90&crop=false"
+              class="card-img-top" alt="Handbag">
+            <div class="card-img-overlay d-flex flex-column justify-content-end p-0 overlay-content">
+              <div class="bg-white p-3 overlay-inner">
+                <h5 class="card-title mb-1">Handbag</h5>
+                <p class="card-text mb-2">
+                  <span class="text-danger fw-bold">₹1,799</span>
+                  <span class="text-decoration-line-through text-muted ms-2">₹2,599</span>
+                </p>
+                <button class="btn btn-dark btn-sm w-100 add-to-cart" data-id="offer004" data-name="Handbag"
+                  data-price="1799" data-original-price="2599"
+                  data-image="https://rukminim2.flixcart.com/image/850/1000/xif0q/hand-messenger-bag/j/v/u/exotic610-11-2-hb-610-handbag-exotic-8-5-original-imagrqrjd3zph2ne.jpeg?q=90&crop=false">
+                  <i class="bi bi-cart-plus me-1"></i> Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Footer -->
+  <div class="container">
+    <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+      <div class="col mb-3">
+        <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+          <span class="lobster-regular" style="font-size: 1.5rem;">Mosaic</span>
+        </a>
+        <p class="text-body-secondary">© <span id="current-year">2025</span> Mosaic. All rights reserved.</p>
+        <div class="social-icons mt-2">
+          <a href="#" class="text-body-secondary me-2"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-body-secondary me-2"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-body-secondary me-2"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="text-body-secondary"><i class="bi bi-pinterest"></i></a>
+        </div>
+      </div>
+
+      <div class="col mb-3">
+        <h5>Shop</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">New Arrivals</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Best Sellers</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Seasonal
+              Collections</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Sale Items</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Gift Cards</a></li>
+        </ul>
+      </div>
+
+      <div class="col mb-3">
+        <h5>Customer Service</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Contact Us</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Shipping Policy</a>
+          </li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Returns &
+              Exchanges</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Size Guide</a></li>
+        </ul>
+      </div>
+
+      <div class="col mb-3">
+        <h5>About Us</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Our Story</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Sustainability</a>
+          </li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Careers</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Blog</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Press</a></li>
+        </ul>
+      </div>
+
+      <div class="col mb-3">
+        <h5>Legal</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Terms of Service</a>
+          </li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Privacy Policy</a>
+          </li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Cookie Policy</a>
+          </li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Accessibility</a>
+          </li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Sitemap</a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+    <script src="/Components/js/hotoffer.js"></script>
+</body>
+
+</html>

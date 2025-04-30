@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="Buy Nowport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Standard favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="/favicon_io/favicon.ico">
+
+    <!-- Apple Touch Icon (for iPhone, iPad) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+
+    <!-- Android Chrome Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon_io/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon_io/android-chrome-512x512.png">
+
+    <!-- Web Manifest (optional but pro-level for PWA apps) -->
+    <link rel="manifest" href="/favicon_io/site.webmanifest">
+
+
+
+    <!-- Theme Colors (for Chrome, Edge, Mobile browsers) -->
+    <meta name="theme-color" content="#ffffff">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lobster&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Righteous&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lobster&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Righteous&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/style.css" />
+    <title>Mosiac</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand lobster-regular" href="/index.html">Mosaic</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 libre-baskerville-bold">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"
+                            href="/Components/html/collection.html">Collections</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Components/html/hotoffers.html">Hot Offers</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/Components/html/about.html">About Us</a></li>
+                            <li><a class="dropdown-item" href="/Components/html/contact.html">Contact Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Components/html/cart.html" aria-disabled="true">Cart</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">
+                        Search
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+
+    <!-- About Our Team Section -->
+<!-- Luxury Team Section with Images -->
+<section class="luxury-team py-6">
+    <div class="container">
+      <div class="text-center mb-6">
+        <h2 class="display-3 fw-light mb-3">The Visionaries</h2>
+        <div class="luxury-divider mx-auto"></div>
+        <p class="lead text-muted mt-4">Crafting digital excellence through innovation and collaboration</p>
+      </div>
+  
+      <div class="row g-4">
+        <!-- Hassan Sheikh -->
+        <div class="col-12 mb-4">
+          <div class="luxury-card card border-0 h-100 overflow-hidden">
+            <div class="row g-0 h-100">
+              <div class="col-md-4 luxury-accent luxury-accent-primary d-flex align-items-center justify-content-center p-4">
+                <div class="luxury-image-container">
+                  <img src="path_to_hassan_image.jpg" class="luxury-image" alt="Hassan Sheikh" onerror="this.style.display='none'; document.getElementById('hassan-initials').style.display='block'">
+                  <div id="hassan-initials" class="luxury-initials" style="display:none">HS</div>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body p-5">
+                  <h3 class="luxury-name mb-3">Hassan Sheikh</h3>
+                  <h5 class="luxury-role text-primary mb-4">Database Query Maestro</h5>
+                  
+                  <div class="luxury-description mb-4">
+                    <p>As our database architect, Hassan engineered the backbone of our e-commerce platform, optimizing every query to perfection. His work ensures lightning-fast responses even during peak traffic.</p>
+                  </div>
+                  
+                  <div class="luxury-details">
+                    <ul class="luxury-list">
+                      <li>Designed high-performance SQL queries reducing load time by 40%</li>
+                      <li>Implemented advanced indexing strategies for 10M+ product database</li>
+                      <li>Created disaster recovery protocols with 99.99% uptime</li>
+                      <li>Optimized complex joins improving checkout speed by 3x</li>
+                    </ul>
+                  </div>
+                  
+                  <div class="luxury-social mt-5 pt-3">
+                    <a href="#" class="luxury-social-link"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="luxury-social-link"><i class="bi bi-github"></i></a>
+                    <a href="#" class="luxury-social-link luxury-insta"><i class="bi bi-instagram"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Insha Javed -->
+        <div class="col-12 mb-4">
+          <div class="luxury-card card border-0 h-100 overflow-hidden">
+            <div class="row g-0 h-100">
+              <div class="col-md-4 luxury-accent luxury-accent-success d-flex align-items-center justify-content-center p-4">
+                <div class="luxury-image-container">
+                  <img src="path_to_insha_image.jpg" class="luxury-image" alt="Insha Javed" onerror="this.style.display='none'; document.getElementById('insha-initials').style.display='block'">
+                  <div id="insha-initials" class="luxury-initials" style="display:none">IJ</div>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body p-5">
+                  <h3 class="luxury-name mb-3">Insha Javed</h3>
+                  <h5 class="luxury-role text-success mb-4">Data Architecture Virtuoso</h5>
+                  
+                  <div class="luxury-description mb-4">
+                    <p>Insha sculpted our database infrastructure with precision, creating a robust foundation that handles thousands of transactions while maintaining flawless data integrity.</p>
+                  </div>
+                  
+                  <div class="luxury-details">
+                    <ul class="luxury-list">
+                      <li>Architected PostgreSQL schema supporting 50+ tables</li>
+                      <li>Implemented NeonDB cloud integration with auto-scaling</li>
+                      <li>Designed GDPR-compliant data encryption system</li>
+                      <li>Reduced storage requirements by 35% through normalization</li>
+                    </ul>
+                  </div>
+                  
+                  <div class="luxury-social mt-5 pt-3">
+                    <a href="#" class="luxury-social-link"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="luxury-social-link"><i class="bi bi-github"></i></a>
+                    <a href="#" class="luxury-social-link luxury-insta"><i class="bi bi-instagram"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Kaif Khan -->
+        <div class="col-12 mb-4">
+          <div class="luxury-card card border-0 h-100 overflow-hidden">
+            <div class="row g-0 h-100">
+              <div class="col-md-4 luxury-accent luxury-accent-warning d-flex align-items-center justify-content-center p-4">
+                <div class="luxury-image-container">
+                  <img src="path_to_kaif_image.jpg" class="luxury-image" alt="Kaif Khan" onerror="this.style.display='none'; document.getElementById('kaif-initials').style.display='block'">
+                  <div id="kaif-initials" class="luxury-initials" style="display:none">KK</div>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body p-5">
+                  <h3 class="luxury-name mb-3">Kaif Khan</h3>
+                  <h5 class="luxury-role text-warning mb-4">Design Alchemist</h5>
+                  
+                  <div class="luxury-description mb-4">
+                    <p>Kaif transformed our vision into stunning visual reality, crafting an interface that delights users while driving conversions through intuitive design principles.</p>
+                  </div>
+                  
+                  <div class="luxury-details">
+                    <ul class="luxury-list">
+                      <li>Created 50+ Figma screens with interactive prototypes</li>
+                      <li>Established design system used across 100+ components</li>
+                      <li>Improved mobile conversion rate by 27% through UX testing</li>
+                      <li>Designed custom icon set and visual identity</li>
+                    </ul>
+                  </div>
+                  
+                  <div class="luxury-social mt-5 pt-3">
+                    <a href="#" class="luxury-social-link"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="luxury-social-link"><i class="bi bi-github"></i></a>
+                    <a href="#" class="luxury-social-link luxury-insta"><i class="bi bi-instagram"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Hasan Hashmi -->
+        <div class="col-12 mb-4">
+          <div class="luxury-card card border-0 h-100 overflow-hidden">
+            <div class="row g-0 h-100">
+              <div class="col-md-4 luxury-accent luxury-accent-danger d-flex align-items-center justify-content-center p-4">
+                <div class="luxury-image-container">
+                  <img src="path_to_hasan_image.jpg" class="luxury-image" alt="Hasan Hashmi" onerror="this.style.display='none'; document.getElementById('hasan-initials').style.display='block'">
+                  <div id="hasan-initials" class="luxury-initials" style="display:none">HH</div>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body p-5">
+                  <h3 class="luxury-name mb-3">Hasan Hashmi</h3>
+                  <h5 class="luxury-role text-danger mb-4">Full Stack Architect</h5>
+                  
+                  <div class="luxury-description mb-4">
+                    <p>Hasan orchestrated the entire technical symphony, seamlessly connecting frontend elegance with backend robustness to create a performant e-commerce experience.</p>
+                  </div>
+                  
+                  <div class="luxury-details">
+                    <ul class="luxury-list">
+                      <li>Developed 30+ REST APIs with Node.js/Express</li>
+                      <li>Implemented AI recommendation engine boosting sales by 18%</li>
+                      <li>Integrated QR payment system processing 1000+ transactions/day</li>
+                      <li>Optimized Render deployment reducing costs by 40%</li>
+                    </ul>
+                  </div>
+                  
+                  <div class="luxury-social mt-5 pt-3">
+                    <a href="#" class="luxury-social-link"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="luxury-social-link"><i class="bi bi-github"></i></a>
+                    <a href="#" class="luxury-social-link luxury-insta"><i class="bi bi-instagram"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <div class="container">
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+            <div class="col mb-3">
+                <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+                    <span class="lobster-regular" style="font-size: 1.5rem;">Mosaic</span>
+                </a>
+                <p class="text-body-secondary">© <span id="current-year">2025</span> Mosaic. All rights reserved.</p>
+                <div class="social-icons mt-2">
+                    <a href="#" class="text-body-secondary me-2"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-body-secondary me-2"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-body-secondary me-2"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" class="text-body-secondary"><i class="bi bi-pinterest"></i></a>
+                </div>
+            </div>
+
+            <div class="col mb-3">
+                <h5>Shop</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">New Arrivals</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Best Sellers</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Seasonal
+                            Collections</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Sale Items</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Gift Cards</a></li>
+                </ul>
+            </div>
+
+            <div class="col mb-3">
+                <h5>Customer Service</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Contact Us</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Shipping Policy</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Returns &
+                            Exchanges</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Size Guide</a></li>
+                </ul>
+            </div>
+
+            <div class="col mb-3">
+                <h5>About Us</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Our Story</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Sustainability</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Careers</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Blog</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Press</a></li>
+                </ul>
+            </div>
+
+            <div class="col mb-3">
+                <h5>Legal</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Terms of Service</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Privacy Policy</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Cookie Policy</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Accessibility</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Sitemap</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
