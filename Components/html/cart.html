@@ -19,7 +19,7 @@
 
     <!-- Web Manifest (optional but pro-level for PWA apps) -->
     <link rel="manifest" href="favicon_io\site.webmanifest">
-
+    <base href="./">  <!-- Makes all paths relative to current folder -->
 
 
     <!-- Theme Colors (for Chrome, Edge, Mobile browsers) -->
@@ -40,14 +40,14 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lobster&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Righteous&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../../style.css" />
     <title>Cart | Mosaic</title>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand lobster-regular" href="index.html">Mosaic</a>
+            <a class="navbar-brand lobster-regular" href="../../index.html">Mosaic</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
