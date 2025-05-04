@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../favicon_io/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="../../favicon_io/favicon.ico">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lobster&family=Nunito:wght@200..1000&family=Righteous&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../style.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <title>Blog | Mosaic</title>
+
+    <style>
+        :root {
+            --primary-color: #667eea;
+            --secondary-color: #764ba2;
+            --accent-color: #ff6b6b;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+        }
+
+        body {
+            font-family: 'Libre Baskerville', serif;
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            line-height: 1.8;
+        }
+
+        /* Blog Header */
+        .blog-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 5rem 0;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .blog-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .blog-header p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Blog Content */
+        .blog-container {
+            max-width: 900px;
+            margin: 0 auto 5rem;
+        }
+
+        .blog-post {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+
+        .blog-img {
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .blog-content {
+            padding: 2.5rem;
+        }
+
+        .blog-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            color: #6c757d;
+        }
+
+        .blog-meta span {
+            display: flex;
+            align-items: center;
+            margin-right: 1.5rem;
+        }
+
+        .blog-meta i {
+            margin-right: 0.5rem;
+        }
+
+        .blog-text {
+            margin-bottom: 2rem;
+        }
+
+        .blog-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .blog-quote {
+            border-left: 4px solid var(--accent-color);
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: #495057;
+        }
+
+        /* Blog Sidebar */
+        .blog-sidebar {
+            padding-left: 2rem;
+        }
+
+        .sidebar-widget {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .widget-title {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--light-color);
+            color: var(--primary-color);
+        }
+
+        .recent-post {
+            display: flex;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .recent-post-img {
+            width: 80px;
+            height: 60px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 5px;
+            margin-right: 1rem;
+        }
+
+        .recent-post-title {
+            font-size: 0.9rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .recent-post-date {
+            font-size: 0.8rem;
+            color: #6c757d;
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background: var(--light-color);
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .tag:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .blog-header {
+                padding: 3rem 0;
+            }
+
+            .blog-header h1 {
+                font-size: 2rem;
+            }
+
+            .blog-img {
+                height: 250px;
+            }
+
+            .blog-content {
+                padding: 1.5rem;
+            }
+
+            .blog-sidebar {
+                padding-left: 0;
+                margin-top: 3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation (Same as provided) -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand lobster-regular" href="../../index.html">Mosaic</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 libre-baskerville-bold">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="collection.html">Collections</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hotoffers.html">Hot Offers</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                            <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item position-relative">
+                        <a class="nav-link" href="cart.html">
+                            <i class="bi bi-cart"></i>
+                            <span id="cartCount"
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                                style="display: none;">
+                                0
+                            </span>
+                            <span>Cart</span>
+                        </a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">
+                        Search
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Header -->
+    <header class="blog-header">
+        <div class="container">
+            <h1>Mosaic Blog</h1>
+            <p>Discover the latest trends, styling tips, and behind-the-scenes stories from our fashion world</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="row">
+            <!-- Blog Posts Column -->
+            <div class="col-lg-8">
+                <!-- Featured Post -->
+                <article class="blog-post">
+                    <div class="blog-img"
+                        style="background-image: url('https://source.unsplash.com/random/1200x800/?fashion,trends');">
+                    </div>
+                    <div class="blog-content">
+                        <h2 class="blog-title">Spring 2024 Fashion Trends You Need to Know</h2>
+                        <div class="blog-meta">
+                            <span><i class="bi bi-person"></i> By Sarah Johnson</span>
+                            <span><i class="bi bi-calendar"></i> March 15, 2024</span>
+                            <span><i class="bi bi-chat"></i> 12 Comments</span>
+                        </div>
+                        <div class="blog-text">
+                            <p>As we transition into the warmer months, the fashion landscape is blooming with fresh
+                                trends that promise to revitalize your wardrobe. This season, designers have embraced a
+                                mix of nostalgic revivals and innovative new directions that cater to every personal
+                                style.</p>
+
+                            <p>The return of 90s minimalism has been one of the most talked-about trends, with sleek
+                                silhouettes and neutral palettes dominating the runways. However, this isn't your
+                                typical 90s revival—designers have infused these classic looks with modern textures and
+                                unexpected details that give them contemporary relevance.</p>
+
+                            <div class="blog-quote">
+                                "Fashion is not something that exists in dresses only. Fashion is in the sky, in the
+                                street; fashion has to do with ideas, the way we live, what is happening." — Coco Chanel
+                            </div>
+
+                            <p>On the opposite end of the spectrum, maximalism is making a strong statement with bold
+                                prints, vibrant colors, and experimental layering. This trend celebrates individuality
+                                and self-expression, encouraging fashion lovers to mix patterns and textures with
+                                abandon.</p>
+
+                            <p>Sustainability continues to be at the forefront of the industry, with more brands than
+                                ever committing to eco-friendly practices. From upcycled materials to zero-waste
+                                production methods, the fashion world is finally taking meaningful steps toward reducing
+                                its environmental impact.</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </article>
+
+                <!-- Second Post -->
+                <article class="blog-post">
+                    <div class="blog-img"
+                        style="background-image: url('https://source.unsplash.com/random/1200x800/?sustainable,fashion');">
+                    </div>
+                    <div class="blog-content">
+                        <h2 class="blog-title">Sustainable Fashion: More Than Just a Trend</h2>
+                        <div class="blog-meta">
+                            <span><i class="bi bi-person"></i> By Michael Chen</span>
+                            <span><i class="bi bi-calendar"></i> February 28, 2024</span>
+                            <span><i class="bi bi-chat"></i> 8 Comments</span>
+                        </div>
+                        <div class="blog-text">
+                            <p>In recent years, sustainable fashion has evolved from a niche concern to a mainstream
+                                movement. But what does it truly mean to embrace sustainable fashion, and how can
+                                consumers make more informed choices without sacrificing style?</p>
+
+                            <p>The first step is understanding the environmental impact of our clothing. The fashion
+                                industry is responsible for about 10% of global carbon emissions and nearly 20% of
+                                wastewater. Fast fashion, with its rapid production cycles and disposable mentality, has
+                                exacerbated these problems.</p>
+
+                            <p>However, a new wave of designers and brands are challenging this model. They're
+                                implementing innovative solutions like:</p>
+
+                            <ul>
+                                <li>Using organic and recycled materials</li>
+                                <li>Implementing water-saving production techniques</li>
+                                <li>Creating durable, timeless designs</li>
+                                <li>Offering repair and recycling programs</li>
+                            </ul>
+
+                            <p>As consumers, we can support this movement by adopting a "quality over quantity"
+                                approach, choosing versatile pieces that will last for years rather than seasons.
+                                Thrifting and clothing swaps are also excellent ways to refresh your wardrobe
+                                sustainably.</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </article>
+
+                <!-- Third Post -->
+                <article class="blog-post">
+                    <div class="blog-img"
+                        style="background-image: url('https://source.unsplash.com/random/1200x800/?accessories,jewelry');">
+                    </div>
+                    <div class="blog-content">
+                        <h2 class="blog-title">Accessorizing 101: Elevate Your Outfits with the Right Pieces</h2>
+                        <div class="blog-meta">
+                            <span><i class="bi bi-person"></i> By Emma Rodriguez</span>
+                            <span><i class="bi bi-calendar"></i> February 15, 2024</span>
+                            <span><i class="bi bi-chat"></i> 5 Comments</span>
+                        </div>
+                        <div class="blog-text">
+                            <p>Accessories have the power to transform an outfit from ordinary to extraordinary. They're
+                                the punctuation marks of fashion—the elements that complete your style statement. But
+                                with so many options available, how do you choose the right pieces?</p>
+
+                            <p>First, consider proportion. Petite individuals might be overwhelmed by large, chunky
+                                jewelry, while taller frames can carry bold statement pieces with ease. Similarly, the
+                                scale of your handbag should complement your body type.</p>
+
+                            <p>Color coordination is another key factor. While matching your accessories exactly to your
+                                outfit can look dated, choosing complementary colors creates visual harmony. Consider
+                                these approaches:</p>
+
+                            <ul>
+                                <li><strong>Monochromatic:</strong> Different shades of the same color family</li>
+                                <li><strong>Analogous:</strong> Colors next to each other on the color wheel</li>
+                                <li><strong>Complementary:</strong> Opposite colors for high contrast</li>
+                            </ul>
+
+                            <p>Don't forget about texture mixing. Pairing smooth, shiny accessories with matte fabrics
+                                adds dimension to your look. Similarly, combining metals (like gold and silver) is no
+                                longer a fashion faux pas—when done intentionally, it creates an eclectic, modern
+                                aesthetic.</p>
+                        </div>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Sidebar Column -->
+            <div class="col-lg-4">
+                <div class="blog-sidebar">
+                    <!-- About Widget -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">About Mosaic</h3>
+                        <p>Mosaic is a contemporary fashion brand dedicated to creating versatile, high-quality pieces
+                            that celebrate individuality. Our blog shares style inspiration, industry insights, and
+                            behind-the-scenes stories.</p>
+                    </div>
+
+                    <!-- Recent Posts Widget -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Recent Posts</h3>
+                        <div class="recent-post">
+                            <div class="recent-post-img"
+                                style="background-image: url('https://source.unsplash.com/random/300x200/?fashion1');">
+                            </div>
+                            <div>
+                                <h4 class="recent-post-title">The Art of Layering for Fall</h4>
+                                <div class="recent-post-date">January 30, 2024</div>
+                            </div>
+                        </div>
+                        <div class="recent-post">
+                            <div class="recent-post-img"
+                                style="background-image: url('https://source.unsplash.com/random/300x200/?fashion2');">
+                            </div>
+                            <div>
+                                <h4 class="recent-post-title">Denim Through the Decades</h4>
+                                <div class="recent-post-date">January 22, 2024</div>
+                            </div>
+                        </div>
+                        <div class="recent-post">
+                            <div class="recent-post-img"
+                                style="background-image: url('https://source.unsplash.com/random/300x200/?fashion3');">
+                            </div>
+                            <div>
+                                <h4 class="recent-post-title">5 Wardrobe Essentials for 2024</h4>
+                                <div class="recent-post-date">January 10, 2024</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categories Widget -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Categories</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-decoration-none d-block py-2 border-bottom">Trend Reports</a>
+                            </li>
+                            <li><a href="#" class="text-decoration-none d-block py-2 border-bottom">Style Guides</a>
+                            </li>
+                            <li><a href="#" class="text-decoration-none d-block py-2 border-bottom">Sustainable
+                                    Fashion</a></li>
+                            <li><a href="#" class="text-decoration-none d-block py-2 border-bottom">Brand Stories</a>
+                            </li>
+                            <li><a href="#" class="text-decoration-none d-block py-2">Behind the Scenes</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Tags Widget -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Tags</h3>
+                        <div class="tag-cloud">
+                            <a href="#" class="tag">#trends</a>
+                            <a href="#" class="tag">#sustainable</a>
+                            <a href="#" class="tag">#accessories</a>
+                            <a href="#" class="tag">#wardrobe</a>
+                            <a href="#" class="tag">#style</a>
+                            <a href="#" class="tag">#design</a>
+                            <a href="#" class="tag">#outfits</a>
+                            <a href="#" class="tag">#inspiration</a>
+                        </div>
+                    </div>
+
+                    <!-- Newsletter Widget -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Newsletter</h3>
+                        <p>Subscribe to get the latest fashion news and exclusive offers.</p>
+                        <form>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Your email address">
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (Same as provided) -->
+    <div class="container">
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+            <div class="col mb-3">
+                <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+                    <span class="lobster-regular" style="font-size: 1.5rem;">Mosaic</span>
+                </a>
+                <p class="text-body-secondary">© <span id="current-year">2025</span> Mosaic. All rights reserved.</p>
+                <div class="social-icons mt-2">
+                    <a href="#" class="text-body-secondary me-2"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-body-secondary me-2"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-body-secondary me-2"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" class="text-body-secondary"><i class="bi bi-pinterest"></i></a>
+                </div>
+            </div>
+
+            <div class="col mb-3">
+                <h5>Shop</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="collection.html" class="nav-link p-0 text-body-secondary">New
+                            Arrivals</a></li>
+                    <li class="nav-item mb-2"><a href="collection.html" class="nav-link p-0 text-body-secondary">Best
+                            Sellers</a></li>
+                    <li class="nav-item mb-2"><a href="hotoffers.html" class="nav-link p-0 text-body-secondary">Seasonal
+                            Collections</a></li>
+                    <li class="nav-item mb-2"><a href="hotoffers.html" class="nav-link p-0 text-body-secondary">Sale
+                            Items</a></li>
+                    <li class="nav-item mb-2"><a href="giftcard.html" class="nav-link p-0 text-body-secondary">Gift
+                            Cards</a></li>
+                </ul>
+            </div>
+
+            <div class="col mb-3">
+                <h5>Customer Service</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="contact.html" class="nav-link p-0 text-body-secondary">Contact
+                            Us</a></li>
+                    <li class="nav-item mb-2"><a href="faq.html" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="policy.html" class="nav-link p-0 text-body-secondary">Shipping
+                            Policy</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="return.html" class="nav-link p-0 text-body-secondary">Returns &
+                            Exchanges</a></li>
+                    <li class="nav-item mb-2"><a href="sizeGuide.html" class="nav-link p-0 text-body-secondary">Size
+                            Guide</a></li>
+                </ul>
+            </div>
+
+            <div class="col mb-3">
+                <h5>About Us</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="story.html" class="nav-link p-0 text-body-secondary">Our
+                            Story</a></li>
+                    <li class="nav-item mb-2"><a href="sustainability.html"
+                            class="nav-link p-0 text-body-secondary">Sustainability</a>
+                    </li>
+
+                    <li class="nav-item mb-2"><a href="blog.html" class="nav-link p-0 text-body-secondary">Blog</a></li>
+                </ul>
+            </div>
+
+            <div class="col mb-3">
+                <h5>Legal</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="terms.html" class="nav-link p-0 text-body-secondary">Terms of
+                            Service</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="privacy.html" class="nav-link p-0 text-body-secondary">Privacy
+                            Policy</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="cookie.html" class="nav-link p-0 text-body-secondary">Cookie
+                            Policy</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="accessibility.html"
+                            class="nav-link p-0 text-body-secondary">Accessibility</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="sitemap.html"
+                            class="nav-link p-0 text-body-secondary">Sitemap</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <!-- Botpress Chat Widget - Paste before </body> -->
+    <script src="https://cdn.botpress.cloud/webchat/v2.4/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2025/05/04/01/20250504011545-Y5ZGV0JS.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Add animation to blog posts as they come into view
+        document.addEventListener('DOMContentLoaded', function () {
+            const blogPosts = document.querySelectorAll('.blog-post');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            blogPosts.forEach(post => {
+                post.style.opacity = '0';
+                post.style.transform = 'translateY(20px)';
+                post.style.transition = 'all 0.6s ease';
+                observer.observe(post);
+            });
+        });
+    </script>
+</body>
+
+</html>

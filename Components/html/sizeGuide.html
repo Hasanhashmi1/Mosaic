@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Size Guide | Mosaic</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../favicon_io/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="../../favicon_io/favicon.ico">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lobster&family=Nunito:wght@200..1000&family=Righteous&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../style.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-color: #667eea;
+            --secondary-color: #764ba2;
+            --accent-color: #ff6b6b;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        .size-hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 5rem 0;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .size-hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            animation: fadeInDown 1s ease;
+        }
+
+        /* Guide Container */
+        .guide-container {
+            max-width: 1000px;
+            margin: 0 auto 5rem;
+        }
+
+        .guide-section {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+        }
+
+        .guide-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .guide-section h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        /* Size Charts */
+        .size-chart {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+
+        .size-chart th {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .size-chart td {
+            padding: 0.8rem;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .size-chart tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .highlight-size {
+            background-color: rgba(102, 126, 234, 0.1) !important;
+            font-weight: 600;
+        }
+
+        /* Measurement Guide */
+        .measurement-guide {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .measurement-card {
+            flex: 1;
+            min-width: 250px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .measurement-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Fit Recommendations */
+        .fit-options {
+            display: flex;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .fit-option {
+            flex: 1;
+            text-align: center;
+            padding: 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid #eee;
+        }
+
+        .fit-option:hover {
+            border-color: var(--primary-color);
+        }
+
+        .fit-option.active {
+            border-color: var(--primary-color);
+            background-color: rgba(102, 126, 234, 0.05);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .size-hero {
+                padding: 3rem 0;
+            }
+
+            .size-hero h1 {
+                font-size: 2rem;
+            }
+
+            .fit-options {
+                flex-direction: column;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand lobster-regular" href="../../index.html">Mosaic</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 libre-baskerville-bold">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="collection.html">Collections</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hotoffers.html">Hot Offers</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                            <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item position-relative">
+                        <a class="nav-link" href="cart.html">
+                            <i class="bi bi-cart"></i>
+                            <span id="cartCount"
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                                style="display: none;">
+                                0
+                            </span>
+                            <span>Cart</span>
+                        </a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">
+                        Search
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+
+    <!-- Hero Section -->
+    <header class="size-hero">
+        <div class="container">
+            <h1>Find Your Perfect Fit</h1>
+            <p class="lead">Use our size guide to ensure you order the right size every time</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="guide-container">
+            <!-- How to Measure -->
+            <section class="guide-section" id="measure">
+                <h2><i class="fas fa-ruler me-2"></i> How to Measure Yourself</h2>
+                <p>For accurate measurements, use a soft measuring tape and follow these guidelines:</p>
+
+                <div class="measurement-guide">
+                    <div class="measurement-card">
+                        <div class="measurement-icon">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                        <h3>Chest/Bust</h3>
+                        <p>Measure around the fullest part of your chest, keeping the tape horizontal</p>
+                    </div>
+
+                    <div class="measurement-card">
+                        <div class="measurement-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h3>Waist</h3>
+                        <p>Measure around your natural waistline (above your belly button)</p>
+                    </div>
+
+                    <div class="measurement-card">
+                        <div class="measurement-icon">
+                            <i class="fas fa-route"></i>
+                        </div>
+                        <h3>Hips</h3>
+                        <p>Measure around the fullest part of your hips</p>
+                    </div>
+                </div>
+
+                <div class="alert alert-info">
+                    <i class="fas fa-info-circle me-2"></i> <strong>Pro Tip:</strong> Wear form-fitting clothing when
+                    measuring and don't pull the tape too tight.
+                </div>
+            </section>
+
+            <!-- Women's Size Chart -->
+            <section class="guide-section" id="womens">
+                <h2><i class="fas fa-female me-2"></i> Women's Size Chart</h2>
+                <p>Our women's sizing for tops, dresses, and bottoms:</p>
+
+                <div class="table-responsive">
+                    <table class="size-chart">
+                        <thead>
+                            <tr>
+                                <th>Size</th>
+                                <th>XS</th>
+                                <th>S</th>
+                                <th>M</th>
+                                <th>L</th>
+                                <th>XL</th>
+                                <th>XXL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Bust (inches)</strong></td>
+                                <td>32-33</td>
+                                <td>34-35</td>
+                                <td class="highlight-size">36-37</td>
+                                <td>38-40</td>
+                                <td>41-43</td>
+                                <td>44-46</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Waist (inches)</strong></td>
+                                <td>24-25</td>
+                                <td>26-27</td>
+                                <td class="highlight-size">28-29</td>
+                                <td>30-32</td>
+                                <td>33-35</td>
+                                <td>36-38</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Hips (inches)</strong></td>
+                                <td>34-35</td>
+                                <td>36-37</td>
+                                <td class="highlight-size">38-39</td>
+                                <td>40-42</td>
+                                <td>43-45</td>
+                                <td>46-48</td>
+                            </tr>
+                            <tr>
+                                <td><strong>US Size</strong></td>
+                                <td>0-2</td>
+                                <td>4-6</td>
+                                <td class="highlight-size">8-10</td>
+                                <td>12-14</td>
+                                <td>16-18</td>
+                                <td>20-22</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p><small>*Highlighted size represents our most popular fit</small></p>
+            </section>
+
+            <!-- Men's Size Chart -->
+            <section class="guide-section" id="mens">
+                <h2><i class="fas fa-male me-2"></i> Men's Size Chart</h2>
+                <p>Our men's sizing for shirts, polos, and pants:</p>
+
+                <div class="table-responsive">
+                    <table class="size-chart">
+                        <thead>
+                            <tr>
+                                <th>Size</th>
+                                <th>S</th>
+                                <th>M</th>
+                                <th>L</th>
+                                <th>XL</th>
+                                <th>XXL</th>
+                                <th>XXXL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Chest (inches)</strong></td>
+                                <td>34-36</td>
+                                <td class="highlight-size">38-40</td>
+                                <td>42-44</td>
+                                <td>46-48</td>
+                                <td>50-52</td>
+                                <td>54-56</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Waist (inches)</strong></td>
+                                <td>28-30</td>
+                                <td class="highlight-size">32-34</td>
+                                <td>36-38</td>
+                                <td>40-42</td>
+                                <td>44-46</td>
+                                <td>48-50</td>
+                            </tr>
+                            <tr>
+                                <td><strong>US Shirt Size</strong></td>
+                                <td>14-14.5</td>
+                                <td class="highlight-size">15-15.5</td>
+                                <td>16-16.5</td>
+                                <td>17-17.5</td>
+                                <td>18-18.5</td>
+                                <td>19-19.5</td>
+                            </tr>
+                            <tr>
+                                <td><strong>US Pants Size</strong></td>
+                                <td>28-30</td>
+                                <td class="highlight-size">32-34</td>
+                                <td>36-38</td>
+                                <td>40-42</td>
+                                <td>44-46</td>
+                                <td>48-50</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Fit Recommendations -->
+            <section class="guide-section" id="fit">
+                <h2><i class="fas fa-tshirt me-2"></i> Fit Recommendations</h2>
+                <p>Our clothing comes in different fits. Choose based on your preference:</p>
+
+                <div class="fit-options">
+                    <div class="fit-option active">
+                        <i class="fas fa-compress-alt mb-2" style="font-size: 1.5rem; color: var(--primary-color);"></i>
+                        <h4>Slim Fit</h4>
+                        <p>Close to body, tailored silhouette</p>
+                    </div>
+
+                    <div class="fit-option">
+                        <i class="fas fa-arrows-alt-h mb-2" style="font-size: 1.5rem; color: var(--primary-color);"></i>
+                        <h4>Regular Fit</h4>
+                        <p>Standard cut with comfortable ease</p>
+                    </div>
+
+                    <div class="fit-option">
+                        <i class="fas fa-expand-alt mb-2" style="font-size: 1.5rem; color: var(--primary-color);"></i>
+                        <h4>Relaxed Fit</h4>
+                        <p>Loose and comfortable with extra room</p>
+                    </div>
+                </div>
+
+                <div class="alert alert-warning mt-3">
+                    <i class="fas fa-exclamation-triangle me-2"></i> <strong>Note:</strong> Some styles may run small or
+                    large. Check individual product pages for specific fit advice.
+                </div>
+            </section>
+
+            <!-- International Sizing -->
+            <section class="guide-section" id="international">
+                <h2><i class="fas fa-globe-americas me-2"></i> International Size Conversion</h2>
+                <p>Compare our sizes with international standards:</p>
+
+                <div class="table-responsive">
+                    <table class="size-chart">
+                        <thead>
+                            <tr>
+                                <th>Mosaic Size</th>
+                                <th>US</th>
+                                <th>UK</th>
+                                <th>EU</th>
+                                <th>Japan</th>
+                                <th>Australia</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>XS/S</strong></td>
+                                <td>0-4</td>
+                                <td>4-8</td>
+                                <td>32-36</td>
+                                <td>5-7</td>
+                                <td>6-10</td>
+                            </tr>
+                            <tr>
+                                <td><strong>M</strong></td>
+                                <td>6-8</td>
+                                <td>10-12</td>
+                                <td>38-40</td>
+                                <td>9-11</td>
+                                <td>12-14</td>
+                            </tr>
+                            <tr>
+                                <td><strong>L/XL</strong></td>
+                                <td>10-14</td>
+                                <td>14-18</td>
+                                <td>42-46</td>
+                                <td>13-15</td>
+                                <td>16-18</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+
+        <!-- Help Section -->
+        <div class="guide-section visible" id="help">
+            <h2><i class="fas fa-question-circle me-2"></i> Still Unsure About Your Size?</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <h3><i class="fas fa-comments me-2"></i> Live Chat</h3>
+                            <p>Our stylists are available to help you find your perfect fit in real-time.</p>
+                            <a href="#" class="btn btn-primary">Chat Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-3 mt-md-0">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <h3><i class="fas fa-envelope me-2"></i> Email Us</h3>
+                            <p>Send us your measurements and we'll recommend the best size for you.</p>
+                            <a href="#" class="btn btn-outline-primary">Contact Support</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- footer -->
+    <div class="container">
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+            <div class="col mb-3">
+                <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+                    <span class="lobster-regular" style="font-size: 1.5rem;">Mosaic</span>
+                </a>
+                <p class="text-body-secondary">© <span id="current-year">2025</span> Mosaic. All rights reserved.</p>
+                <div class="social-icons mt-2">
+                    <a href="#" class="text-body-secondary me-2"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-body-secondary me-2"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-body-secondary me-2"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" class="text-body-secondary"><i class="bi bi-pinterest"></i></a>
+                </div>
+            </div>
+
+            <div class="col mb-3">
+                <h5>Shop</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="collection.html" class="nav-link p-0 text-body-secondary">New
+                            Arrivals</a></li>
+                    <li class="nav-item mb-2"><a href="collection.html" class="nav-link p-0 text-body-secondary">Best
+                            Sellers</a></li>
+                    <li class="nav-item mb-2"><a href="hotoffers.html" class="nav-link p-0 text-body-secondary">Seasonal
+                            Collections</a></li>
+                    <li class="nav-item mb-2"><a href="hotoffers.html" class="nav-link p-0 text-body-secondary">Sale
+                            Items</a></li>
+                    <li class="nav-item mb-2"><a href="giftcard.html" class="nav-link p-0 text-body-secondary">Gift
+                            Cards</a></li>
+                </ul>
+            </div>
+
+            <div class="col mb-3">
+                <h5>Customer Service</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="contact.html" class="nav-link p-0 text-body-secondary">Contact
+                            Us</a></li>
+                    <li class="nav-item mb-2"><a href="faq.html" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="policy.html" class="nav-link p-0 text-body-secondary">Shipping
+                            Policy</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="return.html" class="nav-link p-0 text-body-secondary">Returns &
+                            Exchanges</a></li>
+                    <li class="nav-item mb-2"><a href="sizeGuide.html" class="nav-link p-0 text-body-secondary">Size
+                            Guide</a></li>
+                </ul>
+            </div>
+
+            <div class="col mb-3">
+                <h5>About Us</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="story.html" class="nav-link p-0 text-body-secondary">Our
+                            Story</a></li>
+                    <li class="nav-item mb-2"><a href="sustainability.html"
+                            class="nav-link p-0 text-body-secondary">Sustainability</a>
+                    </li>
+
+                    <li class="nav-item mb-2"><a href="blog.html" class="nav-link p-0 text-body-secondary">Blog</a></li>
+                </ul>
+            </div>
+
+            <div class="col mb-3">
+                <h5>Legal</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="terms.html" class="nav-link p-0 text-body-secondary">Terms of
+                            Service</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="privacy.html" class="nav-link p-0 text-body-secondary">Privacy
+                            Policy</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="cookie.html" class="nav-link p-0 text-body-secondary">Cookie
+                            Policy</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="accessibility.html"
+                            class="nav-link p-0 text-body-secondary">Accessibility</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="sitemap.html"
+                            class="nav-link p-0 text-body-secondary">Sitemap</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.botpress.cloud/webchat/v2.4/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2025/05/04/01/20250504011545-Y5ZGV0JS.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Animate sections on scroll
+            const animateOnScroll = () => {
+                const sections = document.querySelectorAll('.guide-section');
+
+                sections.forEach(section => {
+                    const sectionPosition = section.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+
+                    if (sectionPosition < screenPosition) {
+                        section.classList.add('visible');
+                    }
+                });
+            };
+
+            // Initial check
+            animateOnScroll();
+
+            // Check on scroll
+            window.addEventListener('scroll', animateOnScroll);
+
+            // Fit option selection
+            const fitOptions = document.querySelectorAll('.fit-option');
+            fitOptions.forEach(option => {
+                option.addEventListener('click', function () {
+                    fitOptions.forEach(opt => opt.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            // Highlight size on hover (for charts)
+            const sizeCells = document.querySelectorAll('.size-chart td:not(:first-child)');
+            sizeCells.forEach(cell => {
+                cell.addEventListener('mouseover', function () {
+                    const index = this.cellIndex;
+                    const row = this.parentNode;
+                    const table = row.parentNode;
+
+                    // Highlight all cells in this column
+                    table.querySelectorAll(`tr td:nth-child(${index + 1})`).forEach(td => {
+                        td.classList.add('highlight-size');
+                    });
+                });
+
+                cell.addEventListener('mouseout', function () {
+                    const index = this.cellIndex;
+                    const row = this.parentNode;
+                    const table = row.parentNode;
+
+                    // Remove highlight from all cells in this column
+                    table.querySelectorAll(`tr td:nth-child(${index + 1})`).forEach(td => {
+                        td.classList.remove('highlight-size');
+                    });
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

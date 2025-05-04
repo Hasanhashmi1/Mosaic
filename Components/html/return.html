@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="Buy Nowport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Standard favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../favicon_io/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="../../favicon_io/favicon.ico">
+
+    <!-- Apple Touch Icon (for iPhone, iPad) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../favicon_io/apple-touch-icon.png">
+
+    <!-- Android Chrome Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="../../favicon_io/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../../favicon_io/android-chrome-512x512.png">
+
+    <!-- Web Manifest (optional but pro-level for PWA apps) -->
+    <link rel="manifest" href="../../favicon_io/site.webmanifest">
+
+    <base href="./"> <!-- Makes all paths relative to current folder -->
+
+    <!-- Theme Colors (for Chrome, Edge, Mobile browsers) -->
+    <meta name="theme-color" content="#ffffff">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lobster&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Righteous&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lobster&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Righteous&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../style.css" />
+    <title>Returns & Exchange Policy | Mosaic</title>
+    <style>
+        /* Modern Returns Policy Styles */
+        :root {
+            --primary-color: #667eea;
+            --secondary-color: #764ba2;
+            --accent-color: #ff6b6b;
+            --success-color: #28a745;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        .policy-hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 5rem 0;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .policy-hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            animation: fadeInDown 1s ease;
+        }
+
+        .policy-hero p {
+            font-size: 1.2rem;
+            opacity: 0;
+            animation: fadeIn 1s ease 0.3s forwards;
+        }
+
+        /* Policy Container */
+        .policy-container {
+            max-width: 900px;
+            margin: 0 auto 5rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            padding: 3rem;
+        }
+
+        .policy-section {
+            margin-bottom: 2.5rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+        }
+
+        .policy-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .policy-section h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .policy-section h3 {
+            color: var(--secondary-color);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.3rem;
+        }
+
+        .policy-point {
+            display: flex;
+            margin-bottom: 1rem;
+            align-items: flex-start;
+        }
+
+        .policy-point i {
+            color: var(--accent-color);
+            margin-right: 1rem;
+            margin-top: 0.2rem;
+        }
+
+        .policy-note {
+            background-color: #f8f9fa;
+            border-left: 4px solid var(--success-color);
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .process-steps {
+            counter-reset: step-counter;
+            margin: 2rem 0;
+        }
+
+        .process-step {
+            position: relative;
+            padding-left: 3.5rem;
+            margin-bottom: 1.5rem;
+            counter-increment: step-counter;
+        }
+
+        .process-step:before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2.5rem;
+            height: 2.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .timeline {
+            border-left: 3px solid var(--primary-color);
+            margin: 2rem 0 2rem 1.25rem;
+            padding-left: 2rem;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: -2.5rem;
+            top: 0.3rem;
+            width: 1rem;
+            height: 1rem;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+        }
+
+        /* Contact CTA */
+        .contact-cta {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 3rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+        }
+
+        .contact-cta.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .policy-hero {
+                padding: 3rem 0;
+            }
+
+            .policy-hero h1 {
+                font-size: 2rem;
+            }
+
+            .policy-container {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand lobster-regular" href="../../index.html">Mosaic</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 libre-baskerville-bold">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="collection.html">Collections</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hotoffers.html">Hot Offers</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                            <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html" aria-disabled="true">Cart</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">
+                        Search
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+    <!-- Hero Section -->
+    <header class="policy-hero">
+        <div class="container">
+            <h1>Returns & Exchange Policy</h1>
+            <p>Hassle-free returns and exchanges for your peace of mind</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="policy-container">
+            <!-- Returns Overview -->
+            <section class="policy-section" id="overview">
+                <h2>Returns Overview</h2>
+                <p>At Mosaic, we want you to be completely satisfied with your purchase. If you're not happy with your
+                    order, we offer easy returns and exchanges within our policy period.</p>
+
+                <div class="policy-note">
+                    <p><strong>Note:</strong> Gift cards are final sale and cannot be returned or exchanged unless
+                        required by law.</p>
+                </div>
+
+                <div class="policy-point">
+                    <i class="fas fa-calendar-check"></i>
+                    <div>
+                        <h3>Return Window</h3>
+                        <p>You may return most items within <strong>30 days</strong> of delivery for a full refund or
+                            exchange. Some items may have different return timeframes (see below).</p>
+                    </div>
+                </div>
+
+                <div class="policy-point">
+                    <i class="fas fa-tags"></i>
+                    <div>
+                        <h3>Condition Requirements</h3>
+                        <p>Items must be unused, in original condition with all tags attached, and in original
+                            packaging. We reserve the right to refuse returns that don't meet these conditions.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Return Process -->
+            <section class="policy-section" id="process">
+                <h2>How to Return an Item</h2>
+                <p>Follow these simple steps to return your item:</p>
+
+                <div class="process-steps">
+                    <div class="process-step">
+                        <h3>Initiate Your Return</h3>
+                        <p>Log in to your account and go to "Order History" to start the return process. You'll need
+                            your order number and email address.</p>
+                    </div>
+
+                    <div class="process-step">
+                        <h3>Print Return Label</h3>
+                        <p>We'll email you a prepaid return shipping label. Print it and attach it securely to your
+                            package.</p>
+                    </div>
+
+                    <div class="process-step">
+                        <h3>Package Your Item</h3>
+                        <p>Pack the item securely in its original packaging if possible. Include all original tags,
+                            accessories, and free gifts.</p>
+                    </div>
+
+                    <div class="process-step">
+                        <h3>Ship Your Return</h3>
+                        <p>Drop off your package at any authorized shipping center. You'll receive a confirmation email
+                            when we receive your return.</p>
+                    </div>
+                </div>
+
+                <div class="policy-point">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h3>Processing Time</h3>
+                        <p>Please allow 5-7 business days for your return to be processed after we receive it. Refunds
+                            will be issued to your original payment method.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Exchange Process -->
+            <section class="policy-section" id="exchange">
+                <h2>Exchange Process</h2>
+                <p>Want a different size, color, or style? Here's how exchanges work:</p>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>Request an Exchange</h3>
+                        <p>Start the exchange process through your account within 30 days of delivery. Select the item
+                            you want instead.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3>Ship Your Original Item</h3>
+                        <p>Use the provided return label to send back your original purchase. The item must meet our
+                            return conditions.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3>Receive Your New Item</h3>
+                        <p>Once we receive your return, we'll ship your exchange item. You'll be notified via email with
+                            tracking information.</p>
+                    </div>
+                </div>
+
+                <div class="policy-point">
+                    <i class="fas fa-info-circle"></i>
+                    <div>
+                        <h3>Important Notes</h3>
+                        <p>Exchanges are subject to availability. If your requested item is out of stock, we'll contact
+                            you to discuss alternatives or issue a refund.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Refund Information -->
+            <section class="policy-section" id="refunds">
+                <h2>Refund Information</h2>
+
+                <div class="policy-point">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <div>
+                        <h3>Refund Method</h3>
+                        <p>Refunds are issued to the original payment method. Credit card refunds may take 5-10 business
+                            days to appear on your statement after processing.</p>
+                    </div>
+                </div>
+
+                <div class="policy-point">
+                    <i class="fas fa-shipping-fast"></i>
+                    <div>
+                        <h3>Shipping Costs</h3>
+                        <p>Original shipping fees are non-refundable unless the return is due to our error. Return
+                            shipping is free for domestic returns.</p>
+                    </div>
+                </div>
+
+                <div class="policy-point">
+                    <i class="fas fa-gift"></i>
+                    <div>
+                        <h3>Sale Items</h3>
+                        <p>Sale items are eligible for exchange or store credit only, unless defective or incorrect.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Exceptions -->
+            <section class="policy-section" id="exceptions">
+                <h2>Exceptions & Special Cases</h2>
+
+                <div class="policy-point">
+                    <i class="fas fa-tshirt"></i>
+                    <div>
+                        <h3>Final Sale Items</h3>
+                        <p>Clearance items, intimate apparel, and personalized items are final sale and cannot be
+                            returned or exchanged.</p>
+                    </div>
+                </div>
+
+                <div class="policy-point">
+                    <i class="fas fa-box-open"></i>
+                    <div>
+                        <h3>Damaged or Defective Items</h3>
+                        <p>If your item arrives damaged or defective, contact us within 48 hours of delivery for
+                            expedited resolution.</p>
+                    </div>
+                </div>
+
+                <div class="policy-point">
+                    <i class="fas fa-globe"></i>
+                    <div>
+                        <h3>International Returns</h3>
+                        <p>International customers are responsible for return shipping costs. We recommend using a
+                            trackable shipping service.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Extended Holiday Policy -->
+            <section class="policy-section" id="holiday">
+                <h2>Holiday Return Policy</h2>
+                <p>For purchases made between November 1st and December 31st, we extend our return window until January
+                    31st of the following year.</p>
+
+                <div class="policy-point">
+                    <i class="fas fa-calendar-alt"></i>
+                    <div>
+                        <h3>Gift Returns</h3>
+                        <p>If you received an item as a gift, you can exchange it for store credit with proof of
+                            purchase. Contact our customer service for assistance.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Contact CTA -->
+        <div class="contact-cta" id="contact-cta">
+            <h2>Need Help With a Return?</h2>
+            <p class="mb-4">Our customer support team is happy to assist with any return or exchange questions.</p>
+            <a href="contact.html" class="btn btn-light btn-lg">Start a Return</a>
+            <a href="contact.html" class="btn btn-outline-light btn-lg ms-3">Contact Support</a>
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <div class="container">
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+            <div class="col mb-3">
+                <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+                    <span class="lobster-regular" style="font-size: 1.5rem;">Mosaic</span>
+                </a>
+                <p class="text-body-secondary">© <span id="current-year">2025</span> Mosaic. All rights reserved.</p>
+                <div class="social-icons mt-2">
+                    <a href="#" class="text-body-secondary me-2"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-body-secondary me-2"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-body-secondary me-2"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" class="text-body-secondary"><i class="bi bi-pinterest"></i></a>
+                </div>
+            </div>
+
+            <div class="col mb-3">
+                <h5>Shop</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="collection.html" class="nav-link p-0 text-body-secondary">New
+                            Arrivals</a></li>
+                    <li class="nav-item mb-2"><a href="collection.html" class="nav-link p-0 text-body-secondary">Best
+                            Sellers</a></li>
+                    <li class="nav-item mb-2"><a href="hotoffers.html" class="nav-link p-0 text-body-secondary">Seasonal
+                            Collections</a></li>
+                    <li class="nav-item mb-2"><a href="hotoffers.html" class="nav-link p-0 text-body-secondary">Sale
+                            Items</a></li>
+                    <li class="nav-item mb-2"><a href="giftcard.html" class="nav-link p-0 text-body-secondary">Gift
+                            Cards</a></li>
+                </ul>
+            </div>
+
+            <div class="col mb-3">
+                <h5>Customer Service</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="contact.html" class="nav-link p-0 text-body-secondary">Contact
+                            Us</a></li>
+                    <li class="nav-item mb-2"><a href="faq.html" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="policy.html" class="nav-link p-0 text-body-secondary">Shipping
+                            Policy</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="return.html" class="nav-link p-0 text-body-secondary">Returns &
+                            Exchanges</a></li>
+                    <li class="nav-item mb-2"><a href="sizeGuide.html" class="nav-link p-0 text-body-secondary">Size
+                            Guide</a></li>
+                </ul>
+            </div>
+
+            <div class="col mb-3">
+                <h5>About Us</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="story.html" class="nav-link p-0 text-body-secondary">Our
+                            Story</a></li>
+                    <li class="nav-item mb-2"><a href="sustainability.html"
+                            class="nav-link p-0 text-body-secondary">Sustainability</a>
+                    </li>
+
+                    <li class="nav-item mb-2"><a href="blog.html" class="nav-link p-0 text-body-secondary">Blog</a></li>
+                </ul>
+            </div>
+
+            <div class="col mb-3">
+                <h5>Legal</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="terms.html" class="nav-link p-0 text-body-secondary">Terms of
+                            Service</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="privacy.html" class="nav-link p-0 text-body-secondary">Privacy
+                            Policy</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="cookie.html" class="nav-link p-0 text-body-secondary">Cookie
+                            Policy</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="accessibility.html"
+                            class="nav-link p-0 text-body-secondary">Accessibility</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="sitemap.html"
+                            class="nav-link p-0 text-body-secondary">Sitemap</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+
+
+    <!-- Botpress Chat Widget - Paste before </body> -->
+    <script src="https://cdn.botpress.cloud/webchat/v2.4/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2025/05/04/01/20250504011545-Y5ZGV0JS.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Animate policy sections on scroll
+            const animateOnScroll = () => {
+                const policySections = document.querySelectorAll('.policy-section');
+                const contactCTA = document.getElementById('contact-cta');
+
+                policySections.forEach(section => {
+                    const sectionPosition = section.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+
+                    if (sectionPosition < screenPosition) {
+                        section.classList.add('visible');
+                    }
+                });
+
+                // Animate CTA
+                const ctaPosition = contactCTA.getBoundingClientRect().top;
+                if (ctaPosition < window.innerHeight) {
+                    contactCTA.classList.add('visible');
+                }
+            };
+
+            // Initial check in case elements are already visible
+            animateOnScroll();
+
+            // Check on scroll
+            window.addEventListener('scroll', animateOnScroll);
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

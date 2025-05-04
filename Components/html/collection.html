@@ -20,7 +20,7 @@
     <!-- Web Manifest (optional but pro-level for PWA apps) -->
     <link rel="manifest" href="../../favicon_io/site.webmanifest">
 
-    <base href="./">  <!-- Makes all paths relative to current folder -->
+    <base href="./"> <!-- Makes all paths relative to current folder -->
 
     <!-- Theme Colors (for Chrome, Edge, Mobile browsers) -->
     <meta name="theme-color" content="#ffffff">
@@ -43,6 +43,7 @@
 </head>
 
 <body>
+    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand lobster-regular" href="../../index.html">Mosaic</a>
@@ -54,8 +55,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 libre-baskerville-bold">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page"
-                            href="collection.html">Collections</a>
+                        <a class="nav-link active" aria-current="page" href="collection.html">Collections</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="hotoffers.html">Hot Offers</a>
@@ -91,10 +91,10 @@
             </div>
         </div>
     </nav>
-    <!-- Your existing navbar remains the same -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
-        <!-- ... your existing navbar code ... -->
-    </nav>
+
+
+
+
 
     <!-- Collections Section -->
     <div class="container collection-section">
@@ -154,218 +154,222 @@
                     </div>
                 </div>
             </div>
-            </div>
+        </div>
 
-            <!-- Winter Collection -->
-            <h2 class="collection-title">Winter Collection</h2>
-            <div class="row">
-                <!-- Product 1 - Wool Blend Coat -->
-                <div class="col-md-4 col-sm-6 mb-4">
-                    <div class="card product-card">
-                        <img src="https://www.libbylondon.com/cdn/shop/files/Cambridgeblackfitzrovianavywestburynavy2_2048x.jpg?v=1735035782"
-                            class="card-img-top" alt="Winter Jacket">
-                        <div class="card-body">
-                            <h5 class="card-title">Wool Blend Coat</h5>
-                            <p class="card-text">Stay warm in style with this premium winter coat.</p>
-                            <p class="price">₹3,999</p>
-                            <button class="btn btn-primary add-to-cart" data-id="winter001" data-name="Wool Blend Coat"
-                                data-price="3999"
-                                data-image="https://www.libbylondon.com/cdn/shop/files/Cambridgeblackfitzrovianavywestburynavy2_2048x.jpg?v=1735035782">
-                                Add to Cart
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 2 - Cable Knit Sweater -->
-                <div class="col-md-4 col-sm-6 mb-4">
-                    <div class="card product-card">
-                        <img src="https://cdn.shopify.com/s/files/1/0115/3879/2544/files/CH2C0202_3bb40992-0582-49d6-99cb-28cf3e2115da.jpg?v=1731673226"
-                            class="card-img-top" alt="Winter Sweater">
-                        <div class="card-body">
-                            <h5 class="card-title">Cable Knit Sweater</h5>
-                            <p class="card-text">Classic design with modern comfort.</p>
-                            <p class="price">₹1,899</p>
-                            <button class="btn btn-primary add-to-cart" data-id="winter002"
-                                data-name="Cable Knit Sweater" data-price="1899"
-                                data-image="https://cdn.shopify.com/s/files/1/0115/3879/2544/files/CH2C0202_3bb40992-0582-49d6-99cb-28cf3e2115da.jpg?v=1731673226">
-                                Add to Cart
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 3 - Cashmere Scarf -->
-                <div class="col-md-4 col-sm-6 mb-4">
-                    <div class="card product-card">
-                        <img src="https://kashmirloom.com/cdn/shop/files/TrellisStole70x200cmsDoveIvoryModel264_620x.jpg?v=1717480083"
-                            class="card-img-top" alt="Winter Scarf">
-                        <div class="card-body">
-                            <h5 class="card-title">Cashmere Scarf</h5>
-                            <p class="card-text">Luxuriously soft and warm.</p>
-                            <p class="price">₹1,299</p>
-                            <button class="btn btn-primary add-to-cart" data-id="winter003" data-name="Cashmere Scarf"
-                                data-price="1299"
-                                data-image="https://kashmirloom.com/cdn/shop/files/TrellisStole70x200cmsDoveIvoryModel264_620x.jpg?v=1717480083">
-                                Add to Cart
-                            </button>
-                        </div>
+        <!-- Winter Collection -->
+        <h2 class="collection-title">Winter Collection</h2>
+        <div class="row">
+            <!-- Product 1 - Wool Blend Coat -->
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card product-card">
+                    <img src="https://www.libbylondon.com/cdn/shop/files/Cambridgeblackfitzrovianavywestburynavy2_2048x.jpg?v=1735035782"
+                        class="card-img-top" alt="Winter Jacket">
+                    <div class="card-body">
+                        <h5 class="card-title">Wool Blend Coat</h5>
+                        <p class="card-text">Stay warm in style with this premium winter coat.</p>
+                        <p class="price">₹3,999</p>
+                        <button class="btn btn-primary add-to-cart" data-id="winter001" data-name="Wool Blend Coat"
+                            data-price="3999"
+                            data-image="https://www.libbylondon.com/cdn/shop/files/Cambridgeblackfitzrovianavywestburynavy2_2048x.jpg?v=1735035782">
+                            Add to Cart
+                        </button>
                     </div>
                 </div>
             </div>
 
-            <!-- Ethnic Collection -->
-            <h2 class="collection-title">Ethnic Collection</h2>
-            <div class="row">
-                <!-- Product 1 - Silk Saree -->
-                <div class="col-md-4 col-sm-6 mb-4">
-                    <div class="card product-card">
-                        <img src="https://m.media-amazon.com/images/I/71n35zBEILL._AC_UY350_.jpg" 
-                             class="card-img-top" alt="Silk Saree">
-                        <div class="card-body">
-                            <h5 class="card-title">Silk Saree</h5>
-                            <p class="card-text">Elegant traditional wear for special occasions.</p>
-                            <p class="price">₹2,999</p>
-                            <button class="btn btn-primary add-to-cart"
-                                    data-id="ethnic001"
-                                    data-name="Silk Saree"
-                                    data-price="2999"
-                                    data-image="https://m.media-amazon.com/images/I/71n35zBEILL._AC_UY350_.jpg">
-                                 Add to Cart
-                            </button>
-                        </div>
+            <!-- Product 2 - Cable Knit Sweater -->
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card product-card">
+                    <img src="https://cdn.shopify.com/s/files/1/0115/3879/2544/files/CH2C0202_3bb40992-0582-49d6-99cb-28cf3e2115da.jpg?v=1731673226"
+                        class="card-img-top" alt="Winter Sweater">
+                    <div class="card-body">
+                        <h5 class="card-title">Cable Knit Sweater</h5>
+                        <p class="card-text">Classic design with modern comfort.</p>
+                        <p class="price">₹1,899</p>
+                        <button class="btn btn-primary add-to-cart" data-id="winter002" data-name="Cable Knit Sweater"
+                            data-price="1899"
+                            data-image="https://cdn.shopify.com/s/files/1/0115/3879/2544/files/CH2C0202_3bb40992-0582-49d6-99cb-28cf3e2115da.jpg?v=1731673226">
+                            Add to Cart
+                        </button>
                     </div>
                 </div>
-            
-                <!-- Product 2 - Men's Kurta Set -->
-                <div class="col-md-4 col-sm-6 mb-4">
-                    <div class="card product-card">
-                        <img src="https://i.etsystatic.com/30819167/r/il/62e94b/4157618213/il_570xN.4157618213_2qf0.jpg" 
-                             class="card-img-top" alt="Men's Kurta Set">
-                        <div class="card-body">
-                            <h5 class="card-title">Men's Kurta Set</h5>
-                            <p class="card-text">Comfortable and stylish ethnic wear.</p>
-                            <p class="price">₹1,799</p>
-                            <button class="btn btn-primary add-to-cart"
-                                    data-id="ethnic002"
-                                    data-name="Men's Kurta Set"
-                                    data-price="1799"
-                                    data-image="https://i.etsystatic.com/30819167/r/il/62e94b/4157618213/il_570xN.4157618213_2qf0.jpg">
-                                 Add to Cart
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            
-                <!-- Product 3 - Designer Lehenga -->
-                <div class="col-md-4 col-sm-6 mb-4">
-                    <div class="card product-card">
-                        <img src="https://c.ndtvimg.com/2025-01/9le0pm5o_hanna_625x300_04_January_25.jpeg?im=FitAndFill,algorithm=cascade,width=1200,height=738" 
-                             class="card-img-top" alt="Designer Lehenga">
-                        <div class="card-body">
-                            <h5 class="card-title">Designer Lehenga</h5>
-                            <p class="card-text">Perfect for weddings and festive occasions.</p>
-                            <p class="price">₹4,999</p>
-                            <button class="btn btn-primary add-to-cart"
-                                    data-id="ethnic003"
-                                    data-name="Designer Lehenga"
-                                    data-price="4999"
-                                    data-image="https://c.ndtvimg.com/2025-01/9le0pm5o_hanna_625x300_04_January_25.jpeg?im=FitAndFill,algorithm=cascade,width=1200,height=738">
-                                 Add to Cart
-                            </button>
-                        </div>
+            </div>
+
+            <!-- Product 3 - Cashmere Scarf -->
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card product-card">
+                    <img src="https://kashmirloom.com/cdn/shop/files/TrellisStole70x200cmsDoveIvoryModel264_620x.jpg?v=1717480083"
+                        class="card-img-top" alt="Winter Scarf">
+                    <div class="card-body">
+                        <h5 class="card-title">Cashmere Scarf</h5>
+                        <p class="card-text">Luxuriously soft and warm.</p>
+                        <p class="price">₹1,299</p>
+                        <button class="btn btn-primary add-to-cart" data-id="winter003" data-name="Cashmere Scarf"
+                            data-price="1299"
+                            data-image="https://kashmirloom.com/cdn/shop/files/TrellisStole70x200cmsDoveIvoryModel264_620x.jpg?v=1717480083">
+                            Add to Cart
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
 
-
-
-
-
-
-        <div class="container">
-            <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
-                <div class="col mb-3">
-                    <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
-                        <span class="lobster-regular" style="font-size: 1.5rem;">Mosaic</span>
-                    </a>
-                    <p class="text-body-secondary">© <span id="current-year">2025</span> Mosaic. All rights reserved.
-                    </p>
-                    <div class="social-icons mt-2">
-                        <a href="#" class="text-body-secondary me-2"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="text-body-secondary me-2"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="text-body-secondary me-2"><i class="bi bi-twitter-x"></i></a>
-                        <a href="#" class="text-body-secondary"><i class="bi bi-pinterest"></i></a>
+        <!-- Ethnic Collection -->
+        <h2 class="collection-title">Ethnic Collection</h2>
+        <div class="row">
+            <!-- Product 1 - Silk Saree -->
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card product-card">
+                    <img src="https://m.media-amazon.com/images/I/71n35zBEILL._AC_UY350_.jpg" class="card-img-top"
+                        alt="Silk Saree">
+                    <div class="card-body">
+                        <h5 class="card-title">Silk Saree</h5>
+                        <p class="card-text">Elegant traditional wear for special occasions.</p>
+                        <p class="price">₹2,999</p>
+                        <button class="btn btn-primary add-to-cart" data-id="ethnic001" data-name="Silk Saree"
+                            data-price="2999"
+                            data-image="https://m.media-amazon.com/images/I/71n35zBEILL._AC_UY350_.jpg">
+                            Add to Cart
+                        </button>
                     </div>
                 </div>
+            </div>
 
-                <div class="col mb-3">
-                    <h5>Shop</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">New Arrivals</a>
-                        </li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Best Sellers</a>
-                        </li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Seasonal
-                                Collections</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Sale Items</a>
-                        </li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Gift Cards</a>
-                        </li>
-                    </ul>
+            <!-- Product 2 - Men's Kurta Set -->
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card product-card">
+                    <img src="https://i.etsystatic.com/30819167/r/il/62e94b/4157618213/il_570xN.4157618213_2qf0.jpg"
+                        class="card-img-top" alt="Men's Kurta Set">
+                    <div class="card-body">
+                        <h5 class="card-title">Men's Kurta Set</h5>
+                        <p class="card-text">Comfortable and stylish ethnic wear.</p>
+                        <p class="price">₹1,799</p>
+                        <button class="btn btn-primary add-to-cart" data-id="ethnic002" data-name="Men's Kurta Set"
+                            data-price="1799"
+                            data-image="https://i.etsystatic.com/30819167/r/il/62e94b/4157618213/il_570xN.4157618213_2qf0.jpg">
+                            Add to Cart
+                        </button>
+                    </div>
                 </div>
+            </div>
 
-                <div class="col mb-3">
-                    <h5>Customer Service</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Contact Us</a>
-                        </li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Shipping
-                                Policy</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Returns &
-                                Exchanges</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Size Guide</a>
-                        </li>
-                    </ul>
+            <!-- Product 3 - Designer Lehenga -->
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card product-card">
+                    <img src="https://c.ndtvimg.com/2025-01/9le0pm5o_hanna_625x300_04_January_25.jpeg?im=FitAndFill,algorithm=cascade,width=1200,height=738"
+                        class="card-img-top" alt="Designer Lehenga">
+                    <div class="card-body">
+                        <h5 class="card-title">Designer Lehenga</h5>
+                        <p class="card-text">Perfect for weddings and festive occasions.</p>
+                        <p class="price">₹4,999</p>
+                        <button class="btn btn-primary add-to-cart" data-id="ethnic003" data-name="Designer Lehenga"
+                            data-price="4999"
+                            data-image="https://c.ndtvimg.com/2025-01/9le0pm5o_hanna_625x300_04_January_25.jpeg?im=FitAndFill,algorithm=cascade,width=1200,height=738">
+                            Add to Cart
+                        </button>
+                    </div>
                 </div>
-
-                <div class="col mb-3">
-                    <h5>About Us</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Our Story</a>
-                        </li>
-                        <li class="nav-item mb-2"><a href="#"
-                                class="nav-link p-0 text-body-secondary">Sustainability</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Careers</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Blog</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Press</a></li>
-                    </ul>
-                </div>
-
-                <div class="col mb-3">
-                    <h5>Legal</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Terms of
-                                Service</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Privacy
-                                Policy</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Cookie Policy</a>
-                        </li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Accessibility</a>
-                        </li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Sitemap</a></li>
-                    </ul>
-                </div>
-            </footer>
+            </div>
         </div>
+    </div>
 
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"></script>
-        <script src="../js/collection.js"></script>
+
+
+
+
+    <!-- Footer -->
+    <div class="container">
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+            <div class="col mb-3">
+                <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+                    <span class="lobster-regular" style="font-size: 1.5rem;">Mosaic</span>
+                </a>
+                <p class="text-body-secondary">© <span id="current-year">2025</span> Mosaic. All rights reserved.</p>
+                <div class="social-icons mt-2">
+                    <a href="#" class="text-body-secondary me-2"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-body-secondary me-2"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-body-secondary me-2"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" class="text-body-secondary"><i class="bi bi-pinterest"></i></a>
+                </div>
+            </div>
+
+            <div class="col mb-3">
+                <h5>Shop</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="collection.html" class="nav-link p-0 text-body-secondary">New
+                            Arrivals</a></li>
+                    <li class="nav-item mb-2"><a href="collection.html" class="nav-link p-0 text-body-secondary">Best
+                            Sellers</a></li>
+                    <li class="nav-item mb-2"><a href="hotoffers.html" class="nav-link p-0 text-body-secondary">Seasonal
+                            Collections</a></li>
+                    <li class="nav-item mb-2"><a href="hotoffers.html" class="nav-link p-0 text-body-secondary">Sale
+                            Items</a></li>
+                    <li class="nav-item mb-2"><a href="giftcard.html" class="nav-link p-0 text-body-secondary">Gift
+                            Cards</a></li>
+                </ul>
+            </div>
+
+            <div class="col mb-3">
+                <h5>Customer Service</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="contact.html" class="nav-link p-0 text-body-secondary">Contact
+                            Us</a></li>
+                    <li class="nav-item mb-2"><a href="faq.html" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="policy.html" class="nav-link p-0 text-body-secondary">Shipping
+                            Policy</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="return.html" class="nav-link p-0 text-body-secondary">Returns &
+                            Exchanges</a></li>
+                    <li class="nav-item mb-2"><a href="sizeGuide.html" class="nav-link p-0 text-body-secondary">Size
+                            Guide</a></li>
+                </ul>
+            </div>
+
+            <div class="col mb-3">
+                <h5>About Us</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="story.html" class="nav-link p-0 text-body-secondary">Our
+                            Story</a></li>
+                    <li class="nav-item mb-2"><a href="sustainability.html"
+                            class="nav-link p-0 text-body-secondary">Sustainability</a>
+                    </li>
+
+                    <li class="nav-item mb-2"><a href="blog.html" class="nav-link p-0 text-body-secondary">Blog</a></li>
+                </ul>
+            </div>
+
+            <div class="col mb-3">
+                <h5>Legal</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="terms.html" class="nav-link p-0 text-body-secondary">Terms of
+                            Service</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="privacy.html" class="nav-link p-0 text-body-secondary">Privacy
+                            Policy</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="cookie.html" class="nav-link p-0 text-body-secondary">Cookie
+                            Policy</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="accessibility.html"
+                            class="nav-link p-0 text-body-secondary">Accessibility</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="sitemap.html"
+                            class="nav-link p-0 text-body-secondary">Sitemap</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <!-- Botpress Chat Widget - Paste before </body> -->
+    <script src="https://cdn.botpress.cloud/webchat/v2.4/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2025/05/04/01/20250504011545-Y5ZGV0JS.js"></script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="../js/collection.js"></script>
 </body>
 
 </html>

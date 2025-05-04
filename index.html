@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
   <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico">
-  <base href="./">  <!-- Makes all paths relative to current folder -->
+  <base href="./"> <!-- Makes all paths relative to current folder -->
   <!-- Apple Touch Icon (for iPhone, iPad) -->
   <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
 
@@ -41,6 +41,7 @@
     href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lobster&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Righteous&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+
   <title>Mosiac</title>
 </head>
 
@@ -82,15 +83,15 @@
           </li>
           <li class="nav-item position-relative">
             <a class="nav-link" href="Components\html\cart.html">
-                <i class="bi bi-cart"></i>
-                <span id="cartCount" 
-                      class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-                      style="display: none;">
-                    0
-                </span>
-                <span >Cart</span>
+              <i class="bi bi-cart"></i>
+              <span id="cartCount"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                style="display: none;">
+                0
+              </span>
+              <span>Cart</span>
             </a>
-        </li>
+          </li>
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
@@ -444,42 +445,51 @@
       <div class="col mb-3">
         <h5>Shop</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">New Arrivals</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Best Sellers</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Seasonal Collections</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Sale Items</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Gift Cards</a></li>
+          <li class="nav-item mb-2"><a href="Components\html\collection.html"
+              class="nav-link p-0 text-body-secondary">New Arrivals</a>
+          </li>
+          <li class="nav-item mb-2"><a href="Components\html\hotoffers.html"
+              class="nav-link p-0 text-body-secondary">Best Sellers</a>
+          </li>
+          <li class="nav-item mb-2"><a href="Components\html\collection.html"
+              class="nav-link p-0 text-body-secondary">Seasonal
+              Collections</a></li>
+          <li class="nav-item mb-2"><a href="Components\html\hotoffers.html"
+              class="nav-link p-0 text-body-secondary">Sale Items</a>
+          </li>
+          <li class="nav-item mb-2"><a href="Components\html\giftcard.html"
+              class="nav-link p-0 text-body-secondary">Gift Cards</a></li>
         </ul>
       </div>
 
       <div class="col mb-3">
         <h5>Customer Service</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Contact Us</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Shipping Policy</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Returns & Exchanges</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Size Guide</a></li>
+          <li class="nav-item mb-2"><a href="Components\html\contact.html"
+              class="nav-link p-0 text-body-secondary">Contact Us</a></li>
+          <li class="nav-item mb-2"><a href="Components\html\faq.html" class="nav-link p-0 text-body-secondary">FAQs</a>
+          </li>
+          <li class="nav-item mb-2"><a href="Components\html\policy.html"
+              class="nav-link p-0 text-body-secondary">Shipping Policy</a></li>
+          <li class="nav-item mb-2"><a href="Components\html\return.html" class="nav-link p-0 text-body-secondary">Returns & Exchanges</a></li>
+          <li class="nav-item mb-2"><a href="Components\html\sizeGuide.html" class="nav-link p-0 text-body-secondary">Size Guide</a></li>
         </ul>
       </div>
 
       <div class="col mb-3">
         <h5>About Us</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Our Story</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Sustainability</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Careers</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Blog</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Press</a></li>
+          <li class="nav-item mb-2"><a href="Components\html\story.html" class="nav-link p-0 text-body-secondary">Our Story</a></li>
+          <li class="nav-item mb-2"><a href="Components\html\blog.html" class="nav-link p-0 text-body-secondary">Blog</a></li>
         </ul>
       </div>
 
       <div class="col mb-3">
         <h5>Legal</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Terms of Service</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Privacy Policy</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Cookie Policy</a></li>
+          <li class="nav-item mb-2"><a href="Components\html\terms.html" class="nav-link p-0 text-body-secondary">Terms of Service</a></li>
+          <li class="nav-item mb-2"><a href="Components\html\privacy.html" class="nav-link p-0 text-body-secondary">Privacy Policy</a></li>
+          <li class="nav-item mb-2"><a href="Components\html\cookie.html" class="nav-link p-0 text-body-secondary">Cookie Policy</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Accessibility</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Sitemap</a></li>
         </ul>
@@ -491,7 +501,9 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
 
-
+  <!-- Botpress Chat Widget - Paste before </body> -->
+  <script src="https://cdn.botpress.cloud/webchat/v2.4/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2025/05/04/01/20250504011545-Y5ZGV0JS.js"></script>
 
   <script src="script.js"></script>
 </body>

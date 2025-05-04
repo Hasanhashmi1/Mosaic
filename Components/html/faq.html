@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mosaic - Gift Cards & Games</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../favicon_io/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="../../favicon_io/favicon.ico">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lobster&family=Nunito:wght@200..1000&family=Righteous&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand lobster-regular" href="../../index.html">Mosaic</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 libre-baskerville-bold">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="collection.html">Collections</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hotoffers.html">Hot Offers</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                            <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item position-relative">
+                        <a class="nav-link" href="cart.html">
+                            <i class="bi bi-cart"></i>
+                            <span id="cartCount"
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                                style="display: none;">
+                                0
+                            </span>
+                            <span>Cart</span>
+                        </a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">
+                        Search
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="faq-hero">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+            <p>Find answers to common questions about our gift cards</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Search Box -->
+        <div class="search-container">
+            <input type="text" id="faq-search" placeholder="Search FAQs...">
+            <i class="fas fa-search"></i>
+        </div>
+
+        <!-- FAQ Container -->
+        <div class="faq-container">
+            <!-- FAQ Category 1: General -->
+            <h3 class="mb-4" style="border-left: 4px solid var(--primary-color); padding-left: 1rem;">General Questions
+            </h3>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What types of gift cards do you offer?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>We offer a wide variety of gift cards including clothing, accessories, shoes, and multi-brand
+                        cards that can be used across our entire collection. Our cards come in different denominations
+                        to suit every budget.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How do I purchase a gift card?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Purchasing a gift card is simple! Just browse our gift card section, select the card you want,
+                        choose the amount, and add it to your cart. You can pay using any major credit/debit card or
+                        digital payment methods.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Can I use multiple gift cards for one purchase?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, you can combine up to 3 gift cards for a single purchase. During checkout, you'll have the
+                        option to apply multiple gift card codes to your order.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Category 2: Redemption -->
+            <h3 class="mb-4 mt-5" style="border-left: 4px solid var(--accent-color); padding-left: 1rem;">Redemption &
+                Usage</h3>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How do I redeem my gift card?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>To redeem your gift card, simply enter the unique code found on your card during checkout. The
+                        amount will be automatically deducted from your total. You can view your balance at any time by
+                        entering the code on our gift card balance page.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Can I check my gift card balance?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Absolutely! Visit our gift card balance page and enter your card's unique code to see the
+                        remaining balance. You can also see the balance during checkout before completing your purchase.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Do gift cards expire?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Our gift cards never expire! The full value remains available until it's completely used.
+                        However, please note that promotional gift cards may have different terms.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Category 3: Troubleshooting -->
+            <h3 class="mb-4 mt-5" style="border-left: 4px solid var(--secondary-color); padding-left: 1rem;">
+                Troubleshooting</h3>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What should I do if my gift card isn't working?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>First, double-check that you've entered the code correctly. If it still doesn't work, please
+                        contact our customer support team with your gift card details and they'll help resolve the issue
+                        promptly.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Can I get a refund for my gift card?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Gift cards are non-refundable except as required by law. However, if you have any issues, please
+                        contact our support team and we'll do our best to assist you.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What happens if my order total is less than the gift card amount?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>The remaining balance will stay on your gift card for future use. You can check the remaining
+                        balance anytime on our website.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact CTA -->
+        <div class="contact-cta" id="contact-cta">
+            <h2>Still have questions?</h2>
+            <p class="mb-4">Our customer support team is happy to help with any other questions you may have.</p>
+            <a href="contact.html" class="btn btn-light btn-lg">Contact Us</a>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <div class="container">
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+            <div class="col mb-3">
+                <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+                    <span class="lobster-regular" style="font-size: 1.5rem;">Mosaic</span>
+                </a>
+                <p class="text-body-secondary">© <span id="current-year">2025</span> Mosaic. All rights reserved.</p>
+                <div class="social-icons mt-2">
+                    <a href="#" class="text-body-secondary me-2"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-body-secondary me-2"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-body-secondary me-2"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" class="text-body-secondary"><i class="bi bi-pinterest"></i></a>
+                </div>
+            </div>
+
+            <div class="col mb-3">
+                <h5>Shop</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="collection.html" class="nav-link p-0 text-body-secondary">New
+                            Arrivals</a></li>
+                    <li class="nav-item mb-2"><a href="collection.html" class="nav-link p-0 text-body-secondary">Best
+                            Sellers</a></li>
+                    <li class="nav-item mb-2"><a href="hotoffers.html" class="nav-link p-0 text-body-secondary">Seasonal
+                            Collections</a></li>
+                    <li class="nav-item mb-2"><a href="hotoffers.html" class="nav-link p-0 text-body-secondary">Sale
+                            Items</a></li>
+                    <li class="nav-item mb-2"><a href="giftcard.html" class="nav-link p-0 text-body-secondary">Gift
+                            Cards</a></li>
+                </ul>
+            </div>
+
+            <div class="col mb-3">
+                <h5>Customer Service</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="contact.html" class="nav-link p-0 text-body-secondary">Contact
+                            Us</a></li>
+                    <li class="nav-item mb-2"><a href="faq.html" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="policy.html" class="nav-link p-0 text-body-secondary">Shipping
+                            Policy</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="return.html" class="nav-link p-0 text-body-secondary">Returns &
+                            Exchanges</a></li>
+                    <li class="nav-item mb-2"><a href="sizeGuide.html" class="nav-link p-0 text-body-secondary">Size
+                            Guide</a></li>
+                </ul>
+            </div>
+
+            <div class="col mb-3">
+                <h5>About Us</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="story.html" class="nav-link p-0 text-body-secondary">Our
+                            Story</a></li>
+                    <li class="nav-item mb-2"><a href="sustainability.html"
+                            class="nav-link p-0 text-body-secondary">Sustainability</a>
+                    </li>
+
+                    <li class="nav-item mb-2"><a href="blog.html" class="nav-link p-0 text-body-secondary">Blog</a></li>
+                </ul>
+            </div>
+
+            <div class="col mb-3">
+                <h5>Legal</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="terms.html" class="nav-link p-0 text-body-secondary">Terms of
+                            Service</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="privacy.html" class="nav-link p-0 text-body-secondary">Privacy
+                            Policy</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="cookie.html" class="nav-link p-0 text-body-secondary">Cookie
+                            Policy</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="accessibility.html"
+                            class="nav-link p-0 text-body-secondary">Accessibility</a>
+                    </li>
+                    <li class="nav-item mb-2"><a href="sitemap.html"
+                            class="nav-link p-0 text-body-secondary">Sitemap</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <!-- Botpress Chat Widget - Paste before </body> -->
+    <script src="https://cdn.botpress.cloud/webchat/v2.4/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2025/05/04/01/20250504011545-Y5ZGV0JS.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/faq.js"></script>
+
+</body>
+
+</html>
