@@ -348,7 +348,7 @@
 
 /* Card image */
 .SearchContainer .card img {
-    height: 200px;
+    height: 300px;
     object-fit: cover;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
@@ -517,6 +517,143 @@
 }
 
 
+
+
+/* Product Collection Container */
+.product-collection-container {
+  max-width: 1400px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+/* Product Grid Layout */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+/* Fashion Card Styles */
+.fashion-card {
+  width: 100%;
+  max-width: 300px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  text-decoration: none;
+}
+
+.fashion-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Card Image Container */
+.fashion-card-image-container {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+}
+
+.fashion-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.fashion-card:hover .fashion-image {
+  transform: scale(1.05);
+}
+
+/* Discount Badge */
+.discount-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: linear-gradient(135deg, #ff4d4d, #f9cb28);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Details */
+.fashion-card-details {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.fashion-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+
+.fashion-discount {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+/* Product card anchor tag specific styles */
+.myProduct-card {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+  
+  .fashion-card-image-container {
+    height: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-collection-container {
+    padding: 0 1.5rem;
+  }
+  
+  .product-grid {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  
+  .fashion-card-image-container {
+    height: 240px;
+  }
+  
+  .fashion-card-details {
+    padding: 1rem;
+  }
+  
+  .fashion-title {
+    font-size: 1rem;
+  }
+  
+  .fashion-discount {
+    font-size: 0.8rem;
+  }
+}
 
 
 

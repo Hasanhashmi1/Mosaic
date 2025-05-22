@@ -108,6 +108,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // ---------------- NAVBAR FUNCTIONALITY ----------------
     // Call updateNavbar when page loads (inside DOMContentLoaded)
     updateNavbar();
+   
+   
 });
 
 // NAVBAR FUNCTIONS - These need to be OUTSIDE the DOMContentLoaded event

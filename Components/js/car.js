@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                         <input type="number" min="1" class="form-control text-center qty-input" value="${item.quantity}" data-index="${index}">
                                         <button class="btn btn-outline-secondary increase-qty" type="button" data-index="${index}">+</button>
                                     </div>
-                                    <h5 class="mb-0">$${(item.price * item.quantity).toFixed(2)}</h5>
+                                    <h5 class="mb-0">₹${(item.price * item.quantity).toFixed(2)}</h5>
                                 </div>
                             </div>
                         </div>
@@ -134,9 +134,9 @@ document.addEventListener('DOMContentLoaded', function() {
         // Update order summary totals
         updateTotals: function() {
             const totals = cartOperations.calculateTotals();
-            elements.subtotal.textContent = `$${totals.subtotal}`;
-            elements.tax.textContent = `$${totals.tax}`;
-            elements.total.textContent = `$${totals.total}`;
+            elements.subtotal.textContent = `₹${totals.subtotal}`;
+            elements.tax.textContent = `₹${totals.tax}`;
+            elements.total.textContent = `₹${totals.total}`;
         },
         
         // Setup event listeners for cart items
