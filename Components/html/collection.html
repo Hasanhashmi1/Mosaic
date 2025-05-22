@@ -44,50 +44,65 @@
 
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
-        <div class="container-fluid">
-            <a class="navbar-brand lobster-regular" href="../../index.html">Mosaic</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top mosaic-navbar" id="navbar">
+        <div class="container-fluid nav-container">
+            <a class="navbar-brand lobster-regular brand-logo" href="../../index.html">Mosaic</a>
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 libre-baskerville-bold">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="collection.html">Collections</a>
+            <div class="collapse navbar-collapse nav-menu" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 libre-baskerville-bold nav-links">
+                    <li class="nav-item nav-link-item">
+                        <a class="nav-link active nav-link-text" aria-current="page"
+                            href="collection.html">Collections</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="hotoffers.html">Hot Offers</a>
+                    <li class="nav-item nav-link-item">
+                        <a class="nav-link nav-link-text" href="hotoffers.html">Hot Offers</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
+                    <li class="nav-item dropdown nav-link-item">
+                        <a class="nav-link dropdown-toggle nav-link-text" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             Services
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="about.html">About Us</a></li>
-                            <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+                        <ul class="dropdown-menu dropdown-menu-custom">
+                            <li><a class="dropdown-item dropdown-link" href="about.html">About Us</a></li>
+                            <li><a class="dropdown-item dropdown-link" href="contact.html">Contact Us</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item position-relative">
-                        <a class="nav-link" href="cart.html">
-                            <i class="bi bi-cart"></i>
+                    <li class="nav-item position-relative nav-link-item">
+                        <a class="nav-link nav-link-text cart-link" href="cart.html">
+                            <i class="bi bi-cart cart-icon"></i>
                             <span id="cartCount"
-                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-badge"
                                 style="display: none;">
                                 0
                             </span>
-                            <span>Cart</span>
+                            <span class="cart-text">Cart</span>
                         </a>
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                    <button class="btn btn-outline-success" type="submit">
-                        Search
-                    </button>
+                <form class="d-flex nav-search" role="search" onsubmit="return false;">
+                    <input class="form-control me-2 search-input" type="search" placeholder="Search Products"
+                        aria-label="Search" id="searchInput" />
+                    <!-- <button class="btn btn-outline-success" onclick="filterProducts()">Search</button> -->
                 </form>
+
+                <div class="d-flex align-items-center gap-2 mx-2 auth-section" id="authContainer">
+                    <!-- Login/Signup buttons (shown when not logged in) -->
+                    <div id="authButtons" class="auth-buttons">
+                        <a href="login.html" class="btn btn-outline-primary custom-auth-btn login-btn">Login</a>
+                        <a href="signup.html" class="btn btn-primary custom-auth-btn signup-btn">Sign Up</a>
+                    </div>
+
+                    <!-- User info (shown when logged in) -->
+                    <div id="userInfo" class="user-info user-info-section" style="display: none;">
+                        <span class="username-display user-greeting">Welcome, <span id="usernameText"
+                                class="username-text"></span>!</span>
+                        <button class="btn btn-outline-danger btn-sm ms-2 logout-btn" onclick="logout()">Logout</button>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
@@ -97,13 +112,13 @@
 
 
     <!-- Collections Section -->
-    <div class="container collection-section">
+    <div class="container collection-section" id="product-list">
         <!-- Summer Collection -->
         <h2 class="collection-title">Summer Collection</h2>
         <div class="row">
             <!-- Product 1 -->
             <div class="col-md-4 col-sm-6 mb-4">
-                <div class="card product-card">
+                <div class="card product-card" data-name="Floral Summer Dress Lightweight Breathable">
                     <img src="https://m.media-amazon.com/images/I/81ZR+jA48VL._AC_UY1100_.jpg" class="card-img-top"
                         alt="Summer Dress">
                     <div class="card-body">
@@ -121,7 +136,7 @@
 
             <!-- Linen Shirt Card -->
             <div class="col-md-4 col-sm-6 mb-4">
-                <div class="card product-card">
+                <div class="card product-card" data-name="Linen Shirt Beach Outings Casual Summer">
                     <img src="https://journeyeast.in/cdn/shop/files/IMG-20240910_195529_1400x.jpg?v=1726294751"
                         class="card-img-top" alt="Summer Shirt">
                     <div class="card-body">
@@ -139,7 +154,7 @@
 
             <!-- Cotton Shorts Card -->
             <div class="col-md-4 col-sm-6 mb-4">
-                <div class="card product-card">
+                <div class="card product-card" data-name="Cotton Shorts Comfortable Stylish Summer Activities">
                     <img src="https://images.meesho.com/images/products/382299385/idovn_512.webp" class="card-img-top"
                         alt="Summer Shorts">
                     <div class="card-body">
@@ -161,7 +176,7 @@
         <div class="row">
             <!-- Product 1 - Wool Blend Coat -->
             <div class="col-md-4 col-sm-6 mb-4">
-                <div class="card product-card">
+                <div class="card product-card" data-name="Wool Blend Coat Premium Winter Warm">
                     <img src="https://www.libbylondon.com/cdn/shop/files/Cambridgeblackfitzrovianavywestburynavy2_2048x.jpg?v=1735035782"
                         class="card-img-top" alt="Winter Jacket">
                     <div class="card-body">
@@ -179,7 +194,7 @@
 
             <!-- Product 2 - Cable Knit Sweater -->
             <div class="col-md-4 col-sm-6 mb-4">
-                <div class="card product-card">
+                <div class="card product-card" data-name="Cable Knit Sweater Classic Modern Comfort">
                     <img src="https://cdn.shopify.com/s/files/1/0115/3879/2544/files/CH2C0202_3bb40992-0582-49d6-99cb-28cf3e2115da.jpg?v=1731673226"
                         class="card-img-top" alt="Winter Sweater">
                     <div class="card-body">
@@ -197,7 +212,7 @@
 
             <!-- Product 3 - Cashmere Scarf -->
             <div class="col-md-4 col-sm-6 mb-4">
-                <div class="card product-card">
+                <div class="card product-card" data-name="Cashmere Scarf Luxuriously Soft Warm">
                     <img src="https://kashmirloom.com/cdn/shop/files/TrellisStole70x200cmsDoveIvoryModel264_620x.jpg?v=1717480083"
                         class="card-img-top" alt="Winter Scarf">
                     <div class="card-body">
@@ -219,7 +234,7 @@
         <div class="row">
             <!-- Product 1 - Silk Saree -->
             <div class="col-md-4 col-sm-6 mb-4">
-                <div class="card product-card">
+                <div class="card product-card" data-name="Silk Saree Elegant Traditional Special Occasions">
                     <img src="https://m.media-amazon.com/images/I/71n35zBEILL._AC_UY350_.jpg" class="card-img-top"
                         alt="Silk Saree">
                     <div class="card-body">
@@ -237,7 +252,7 @@
 
             <!-- Product 2 - Men's Kurta Set -->
             <div class="col-md-4 col-sm-6 mb-4">
-                <div class="card product-card">
+                <div class="card product-card" data-name="Men's Kurta Set Comfortable Stylish Ethnic Wear">
                     <img src="https://i.etsystatic.com/30819167/r/il/62e94b/4157618213/il_570xN.4157618213_2qf0.jpg"
                         class="card-img-top" alt="Men's Kurta Set">
                     <div class="card-body">
@@ -255,7 +270,7 @@
 
             <!-- Product 3 - Designer Lehenga -->
             <div class="col-md-4 col-sm-6 mb-4">
-                <div class="card product-card">
+                <div class="card product-card" data-name="Designer Lehenga Wedding Festive Occasions">
                     <img src="https://c.ndtvimg.com/2025-01/9le0pm5o_hanna_625x300_04_January_25.jpeg?im=FitAndFill,algorithm=cascade,width=1200,height=738"
                         class="card-img-top" alt="Designer Lehenga">
                     <div class="card-body">
@@ -274,12 +289,18 @@
     </div>
 
 
+    <!-- Search Results Container -->
+    <div id="searchResults" class="container my-5 SearchContainer">
+        <div class="row" id="searchResultRow"></div>
+    </div>
+
+
 
 
 
 
     <!-- Footer -->
-    <div class="container">
+    <div class="container" id="footer">
         <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
             <div class="col mb-3">
                 <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
@@ -351,16 +372,11 @@
                     <li class="nav-item mb-2"><a href="cookie.html" class="nav-link p-0 text-body-secondary">Cookie
                             Policy</a>
                     </li>
-                    <li class="nav-item mb-2"><a href="accessibility.html"
-                            class="nav-link p-0 text-body-secondary">Accessibility</a>
-                    </li>
-                    <li class="nav-item mb-2"><a href="sitemap.html"
-                            class="nav-link p-0 text-body-secondary">Sitemap</a></li>
+                    
                 </ul>
             </div>
         </footer>
     </div>
-    <!-- Botpress Chat Widget - Paste before </body> -->
     <script src="https://cdn.botpress.cloud/webchat/v2.4/inject.js"></script>
     <script src="https://files.bpcontent.cloud/2025/05/04/01/20250504011545-Y5ZGV0JS.js"></script>
 
@@ -370,6 +386,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="../js/collection.js"></script>
+    <script src="../../script.js"></script>
 </body>
 
 </html>

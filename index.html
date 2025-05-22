@@ -46,59 +46,66 @@
 </head>
 
 <body>
-  <!-- For mobile design -->
-  <!-- <div class="card text-white" style="width: 18rem; position: relative;">
-        <img src="Assets/Model3.jpg" class="card-img" alt="Card image">
-        <div class="card-img-overlay d-flex align-items-end p-3">
-          <div class="bg-dark bg-opacity-75 w-100 p-2">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is some text positioned at the bottom of the image.</p>
-          </div>
-        </div>
-      </div> -->
 
-  <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
-    <div class="container-fluid">
-      <a class="navbar-brand lobster-regular" href="index.html">Mosaic</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top mosaic-navbar" id="navbar">
+    <div class="container-fluid nav-container">
+      <a class="navbar-brand lobster-regular brand-logo" href="index.html">Mosaic</a>
+      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 libre-baskerville-bold">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="Components\html\collection.html">Collections</a>
+      <div class="collapse navbar-collapse nav-menu" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 libre-baskerville-bold nav-links">
+          <li class="nav-item nav-link-item">
+            <a class="nav-link active nav-link-text" aria-current="page"
+              href="Components\html\collection.html">Collections</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Components\html\hotoffers.html">Hot Offers</a>
+          <li class="nav-item nav-link-item">
+            <a class="nav-link nav-link-text" href="Components\html\hotoffers.html">Hot Offers</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <li class="nav-item dropdown nav-link-item">
+            <a class="nav-link dropdown-toggle nav-link-text" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
               Services
             </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="Components\html\about.html">About Us</a></li>
-              <li><a class="dropdown-item" href="Components\html\contact.html">Contact Us</a></li>
+            <ul class="dropdown-menu dropdown-menu-custom">
+              <li><a class="dropdown-item dropdown-link" href="Components\html\about.html">About Us</a></li>
+              <li><a class="dropdown-item dropdown-link" href="Components\html\contact.html">Contact Us</a></li>
             </ul>
           </li>
-          <li class="nav-item position-relative">
-            <a class="nav-link" href="Components\html\cart.html">
-              <i class="bi bi-cart"></i>
+          <li class="nav-item position-relative nav-link-item">
+            <a class="nav-link nav-link-text cart-link" href="Components\html\cart.html">
+              <i class="bi bi-cart cart-icon"></i>
               <span id="cartCount"
-                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-badge"
                 style="display: none;">
                 0
               </span>
-              <span>Cart</span>
+              <span class="cart-text">Cart</span>
             </a>
           </li>
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-          <button class="btn btn-outline-success" type="submit">
-            Search
-          </button>
+        <form class="d-flex nav-search" role="search" onsubmit="return false;">
+          <input class="form-control me-2 search-input" type="search" placeholder="Search Products" aria-label="Search"
+            id="searchInput" />
         </form>
+
+        <div class="d-flex align-items-center gap-2 mx-2 auth-section" id="authContainer">
+          <!-- Login/Signup buttons (shown when not logged in) -->
+          <div id="authButtons" class="auth-buttons">
+            <a href="Components/html/login.html" class="btn btn-outline-primary custom-auth-btn login-btn">Login</a>
+            <a href="Components/html/signup.html" class="btn btn-primary custom-auth-btn signup-btn">Sign Up</a>
+          </div>
+
+          <!-- User info (shown when logged in) -->
+          <div id="userInfo" class="user-info user-info-section" style="display: none;">
+            <span class="username-display user-greeting">Welcome, <span id="usernameText"
+                class="username-text"></span>!</span>
+            <button class="btn btn-outline-danger btn-sm ms-2 logout-btn" onclick="logout()">Logout</button>
+          </div>
+        </div>
       </div>
     </div>
   </nav>
@@ -114,12 +121,16 @@
           every occasion, UrbanAura brings you fashion that speaks confidence and elegance.
         </p>
         <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold">
-            Shop Now
-          </button>
-          <button type="button" class="btn btn-outline-secondary btn-lg px-4">
-            Explore Trends
-          </button>
+          <a href="Components/html/collection.html">
+            <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold">
+              Shop Now
+            </button>
+          </a>
+          <a href="Components/html/hotoffers.html">
+            <button type="button" class="btn btn-outline-secondary btn-lg px-4">
+              Explore Trends
+            </button>
+          </a>
         </div>
       </div>
       <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
@@ -171,6 +182,8 @@
       </div>
     </div>
   </div>
+
+
   <div class="container my-5">
     <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
       <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden w-50">
@@ -197,123 +210,242 @@
 
   <div class="container p-3">
     <div class="flex-center-align">
-      <h1 class="libre-baskerville-bold cursor-pointer">NEW ARRIVALS <svg xmlns="http://www.w3.org/2000/svg" width="25"
-          height="25" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-          <path fill-rule="evenodd"
-            d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
-        </svg></h1>
+      <a href="Components/html/collection.html" style="text-decoration: none; color: black;">
+        <h1 class="libre-baskerville-bold cursor-pointer">NEW ARRIVALS <svg xmlns="http://www.w3.org/2000/svg"
+            width="25" height="25" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+          </svg></h1>
+      </a>
     </div>
   </div>
 
-  <div class="container">
+  <div id="product-list" class="container">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
       <div class="col">
-        <div class="card shadow-sm ">
-          <img
-            src="http://res.cloudinary.com/dj5stvxl3/image/upload/v1737750987/Images%20of%20project%20Urban%20Aura/xyfsyzenpuaumckwqb8t.jpg"
-            alt="..." width="100%" height="325" class="object-cover">
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-              content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-primary">Buy Now</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Add to cart</button>
+        <div class="card shadow-sm product-card new-arrival-cards hover-effect"
+          data-name="printed suit women suit m casual summer">
+          <div class="product-image-container">
+            <img
+              src="http://res.cloudinary.com/dj5stvxl3/image/upload/v1737750987/Images%20of%20project%20Urban%20Aura/xyfsyzenpuaumckwqb8t.jpg"
+              alt="Cotton Blue Shirt" class="product-img object-cover">
+            <div class="product-badge">New</div>
+          </div>
+          <div class="card-body product-content">
+            <h3 class="product-title">Printed Suit</h3>
+            <div class="product-rating">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-half"></i>
+              <span class="rating-count">(24)</span>
+            </div>
+            <p class="card-text product-description">
+              Premium quality cotton shirt perfect for summer. Breathable fabric with comfortable fit.
+            </p>
+            <div class="product-price">$39.99 <span class="original-price">$49.99</span></div>
+            <div class="d-flex justify-content-between align-items-center product-actions">
+              <div class="mybtn-group">
+                <a href="Components/html/payment.html" class="btn-buy-now">
+                  <button type="button" class="btn btn-sm btn-primary rounded-pill px-3">
+                    <i class="bi bi-lightning-fill me-1"></i> Buy Now
+                  </button>
+                </a>
+                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3 add-to-cart">
+                  <i class="bi bi-cart-plus me-1"></i> Add to cart
+                </button>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <div class="col">
+        <div class="card shadow-sm product-card new-arrival-cards hover-effect" data-name="blue cotton kurta casual">
+          <div class="product-image-container">
+            <img
+              src="http://res.cloudinary.com/dj5stvxl3/image/upload/v1737747705/Images%20of%20project%20Urban%20Aura/ns4odailxl11qqieyk5b.jpg"
+              alt="Blue Cotton Kurta" class="product-img object-cover">
+            <div class="product-badge">Popular</div>
+          </div>
+          <div class="card-body product-content">
+            <h3 class="product-title">Blue Cotton Kurta</h3>
+            <div class="product-rating">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+              <span class="rating-count">(18)</span>
+            </div>
+            <p class="card-text product-description">A cotton kurta perfect for casual summer wear. Soft, breathable
+              fabric with modern styling.</p>
+            <div class="product-price">$45.99</div>
+            <div class="d-flex justify-content-between align-items-center product-actions">
+              <div class="mybtn-group">
+                <a href="Components/html/payment.html" class="btn-buy-now">
+                  <button type="button" class="btn btn-sm btn-primary rounded-pill px-3">
+                    <i class="bi bi-lightning-fill me-1"></i> Buy Now
+                  </button>
+                </a>
+                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3 add-to-cart">
+                  <i class="bi bi-cart-plus me-1"></i> Add to cart
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col">
-        <div class="card shadow-sm">
-          <img
-            src="http://res.cloudinary.com/dj5stvxl3/image/upload/v1737747705/Images%20of%20project%20Urban%20Aura/ns4odailxl11qqieyk5b.jpg"
-            alt="..." width="100%" height="325" class="object-cover">
 
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-              content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-primary">Buy Now</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Add to cart</button>
+      <div class="col">
+        <div class="card shadow-sm product-card new-arrival-cards hover-effect"
+          data-name="black modern jacket men winter">
+          <div class="product-image-container">
+            <img src="Assets/innerModel5.jpg" alt="Black Jacket" class="product-img object-cover">
+            <div class="product-badge">Winter</div>
+          </div>
+          <div class="card-body product-content">
+            <h3 class="product-title">Black Modern Jacket</h3>
+            <div class="product-rating">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <span class="rating-count">(32)</span>
+            </div>
+            <p class="card-text product-description">Modern black jacket, ideal for winter and street style. Sharp cuts,
+              great fit.</p>
+            <div class="product-price">$89.99 <span class="original-price">$109.99</span></div>
+            <div class="d-flex justify-content-between align-items-center product-actions">
+              <div class="mybtn-group">
+                <a href="Components/html/payment.html" class="btn-buy-now">
+                  <button type="button" class="btn btn-sm btn-primary rounded-pill px-3">
+                    <i class="bi bi-lightning-fill me-1"></i> Buy Now
+                  </button>
+                </a>
+                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3 add-to-cart">
+                  <i class="bi bi-cart-plus me-1"></i> Add to cart
+                </button>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="col">
-        <div class="card shadow-sm">
-          <img src="Assets/innerModel5.jpg" alt="..." width="100%" height="325" class="object-cover">
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-              content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-primary">Buy Now</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Add to cart</button>
+        <div class="card shadow-sm product-card new-arrival-cards hover-effect"
+          data-name="printed shirt floral summer casual">
+          <div class="product-image-container">
+            <img
+              src="http://res.cloudinary.com/dj5stvxl3/image/upload/v1737750988/Images%20of%20project%20Urban%20Aura/xmzkjemtia34z0fjjjvk.jpg"
+              alt="Floral Shirt" class="product-img object-cover border-radius">
+            <div class="product-badge">Summer</div>
+          </div>
+          <div class="card-body product-content">
+            <h3 class="product-title">Floral Printed Shirt</h3>
+            <div class="product-rating">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                class="bi bi-star-half"></i><i class="bi bi-star"></i>
+              <span class="rating-count">(15)</span>
+            </div>
+            <p class="card-text product-description">Floral printed shirt perfect for a casual day out or a relaxed
+              summer vibe.</p>
+            <div class="product-price">$35.99</div>
+            <div class="d-flex justify-content-between align-items-center product-actions">
+              <div class="mybtn-group">
+                <a href="Components/html/payment.html" class="btn-buy-now">
+                  <button type="button" class="btn btn-sm btn-primary rounded-pill px-3">
+                    <i class="bi bi-lightning-fill me-1"></i> Buy Now
+                  </button>
+                </a>
+                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3 add-to-cart">
+                  <i class="bi bi-cart-plus me-1"></i> Add to cart
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
+
       <div class="col">
-        <div class="card shadow-sm">
-          <img
-            src="http://res.cloudinary.com/dj5stvxl3/image/upload/v1737750988/Images%20of%20project%20Urban%20Aura/xmzkjemtia34z0fjjjvk.jpg"
-            alt="..." width="100%" height="325" class="object-cover border-radius">
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-              content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-primary">Buy Now</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Add to cart</button>
+        <div class="card shadow-sm product-card new-arrival-cards hover-effect"
+          data-name="slim fit blue denim jeans men">
+          <div class="product-image-container">
+            <img
+              src="http://res.cloudinary.com/dj5stvxl3/image/upload/v1737750987/Images%20of%20project%20Urban%20Aura/xyfsyzenpuaumckwqb8t.jpg"
+              alt="Blue Jeans" class="product-img object-cover">
+            <div class="product-badge">Bestseller</div>
+          </div>
+          <div class="card-body product-content">
+            <h3 class="product-title">Slim Fit Blue Jeans</h3>
+            <div class="product-rating">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+              <span class="rating-count">(42)</span>
+            </div>
+            <p class="card-text product-description">Slim fit blue denim jeans. Durable, stylish, and perfect for daily
+              wear.</p>
+            <div class="product-price">$59.99 <span class="original-price">$69.99</span></div>
+            <div class="d-flex justify-content-between align-items-center product-actions">
+              <div class="mybtn-group">
+                <a href="Components/html/payment.html" class="btn-buy-now">
+                  <button type="button" class="btn btn-sm btn-primary rounded-pill px-3">
+                    <i class="bi bi-lightning-fill me-1"></i> Buy Now
+                  </button>
+                </a>
+                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3 add-to-cart">
+                  <i class="bi bi-cart-plus me-1"></i> Add to cart
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
+
       <div class="col">
-        <div class="card shadow-sm">
-          <img
-            src="http://res.cloudinary.com/dj5stvxl3/image/upload/v1737750987/Images%20of%20project%20Urban%20Aura/xyfsyzenpuaumckwqb8t.jpg"
-            alt="..." width="100%" height="325" class="object-cover">
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-              content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-primary">Buy Now</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Add to cart</button>
+        <div class="card shadow-sm product-card new-arrival-cards hover-effect"
+          data-name="casual pants brown stretchable men">
+          <div class="product-image-container">
+            <img
+              src="http://res.cloudinary.com/dj5stvxl3/image/upload/v1737750987/Images%20of%20project%20Urban%20Aura/xyfsyzenpuaumckwqb8t.jpg"
+              alt="Brown Pants" class="product-img object-cover">
+            <div class="product-badge">Comfort</div>
+          </div>
+          <div class="card-body product-content">
+            <h3 class="product-title">Brown Casual Pants</h3>
+            <div class="product-rating">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <span class="rating-count">(27)</span>
+            </div>
+            <p class="card-text product-description">Stretchable brown pants designed for comfort and a laid-back look.
+              Great for everyday wear.</p>
+            <div class="product-price">$49.99</div>
+            <div class="d-flex justify-content-between align-items-center product-actions">
+              <div class="mybtn-group">
+                <a href="Components/html/payment.html" class="btn-buy-now">
+                  <button type="button" class="btn btn-sm btn-primary rounded-pill px-3">
+                    <i class="bi bi-lightning-fill me-1"></i> Buy Now
+                  </button>
+                </a>
+                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3 add-to-cart">
+                  <i class="bi bi-cart-plus me-1"></i> Add to cart
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col">
-        <div class="card shadow-sm">
-          <img
-            src="http://res.cloudinary.com/dj5stvxl3/image/upload/v1737750987/Images%20of%20project%20Urban%20Aura/xyfsyzenpuaumckwqb8t.jpg"
-            alt="..." width="100%" height="325" class="object-cover">
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-              content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-primary">Buy Now</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Add to cart</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
+
     </div>
 
 
   </div>
+
+
+  <!-- Search Results Container -->
+  <div id="searchResults" class="container my-5 SearchContainer">
+    <div class="row" id="searchResultRow"></div>
+  </div>
+
+
 
   <div class="container margin-top-bottom">
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
@@ -347,75 +479,83 @@
     </div>
   </div>
 
-  <div class="container margin-top-bottom">
+  <div id="product-list" class="container margin-top-bottom">
     <div class="flex-container">
-      <div class="card cursor-pointer" style="width: 18rem;">
+
+      <div class="card product-card cursor-pointer" data-name="ethnic wear">
         <img
           src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/27950524/2024/2/29/21d77116-a47b-43d8-a69d-073fc26e55451709207862807SangriaOrangeBitaliyanZariSequenceEmbroideredKurtaWithPantAn1.jpg"
-          class="card-img-top" alt="...">
+          class="card-img-top" alt="Ethnic Wear">
         <div class="card-body">
           <p class="card-text">Ethnic Wear</p>
           <h4>UpTo 50% - 80% OFF</h4>
         </div>
       </div>
-      <div class="card cursor-pointer" style="width: 18rem;">
+
+      <div class="card product-card cursor-pointer" data-name="womens activewear">
         <img
           src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/21214802/2024/7/29/f3810127-2921-4012-8cc4-49fc8864b68f1722243258729-HRX-by-Hrithik-Roshan-Women-Printed-Rapid-Dry-Yoga-Tights-67-1.jpg"
-          class="card-img-top" alt="...">
+          class="card-img-top" alt="Women's Activewear">
         <div class="card-body">
           <p class="card-text">Womens Activewear</p>
           <h4>UpTo 50% - 80% OFF</h4>
         </div>
       </div>
-      <div class="card cursor-pointer" style="width: 18rem;">
+
+      <div class="card product-card cursor-pointer" data-name="office wear">
         <img
           src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/2024/OCTOBER/31/r5YVimF1_7bbf3eff840b48e6a7fb490a6b40cd27.jpg"
-          class="card-img-top" alt="...">
+          class="card-img-top" alt="Office Wear">
         <div class="card-body">
           <p class="card-text">Office Wear</p>
           <h4>UpTo 50% - 80% OFF</h4>
         </div>
       </div>
-      <div class="card cursor-pointer" style="width: 18rem;">
+
+      <div class="card product-card cursor-pointer" data-name="ethnic wear">
         <img
           src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/2024/NOVEMBER/28/I2mWEt4n_2481e1bcd7384c4cbb5ffff746486b53.jpg"
-          class="card-img-top" alt="...">
+          class="card-img-top" alt="Ethnic Wear">
         <div class="card-body">
           <p class="card-text">Ethnic Wear</p>
           <h4>UpTo 50% - 80% OFF</h4>
         </div>
       </div>
-      <div class="card cursor-pointer" style="width: 18rem;">
+
+      <div class="card product-card cursor-pointer" data-name="lingerie">
         <img
           src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/24820860/2023/9/5/beec21c1-27b2-4612-b5f5-b023552029791693916976998WomenPrintedLingerieSet2.jpg"
-          class="card-img-top" alt="...">
+          class="card-img-top" alt="Lingerie">
         <div class="card-body">
           <p class="card-text">Lingerie</p>
           <h4>UpTo 50% - 80% OFF</h4>
         </div>
       </div>
-      <div class="card cursor-pointer" style="width: 18rem;">
+
+      <div class="card product-card cursor-pointer" data-name="jewellery">
         <img
           src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/29267350/2024/5/10/326bc5a3-2ae6-4b6f-9957-e06d658dcf4d1715334880862GIVA18KRoseGoldCaptivatingGazeDiamondPendant-134gm1.jpg"
-          class="card-img-top" alt="...">
+          class="card-img-top" alt="Jewellery">
         <div class="card-body">
           <p class="card-text">Jewellery</p>
           <h4>UpTo 50% - 80% OFF</h4>
         </div>
       </div>
-      <div class="card cursor-pointer" style="width: 18rem;">
+
+      <div class="card product-card cursor-pointer" data-name="womens footwear">
         <img
           src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/30217065/2024/7/18/209c099a-a809-4a8d-a857-ca907f1485531721297371390-The-Roadster-Lifestyle-Co-Women-Pointed-Toe-Block-Heels-2172-7.jpg"
-          class="card-img-top" alt="...">
+          class="card-img-top" alt="Women's Footwear">
         <div class="card-body">
           <p class="card-text">Womens Footwear</p>
           <h4>UpTo 50% - 80% OFF</h4>
         </div>
       </div>
-      <div class="card cursor-pointer" style="width: 18rem;">
+
+      <div class="card product-card cursor-pointer" data-name="hand bags">
         <img
           src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/25053400/2023/9/25/93e70270-2177-4452-bee2-401c014dc8fb1695645043066HandbagsGUESSWomenHandbagsGUESSWomenHandbagsGUESSWomenHandba1.jpg"
-          class="card-img-top" alt="...">
+          class="card-img-top" alt="Hand Bags">
         <div class="card-body">
           <p class="card-text">Hand Bags</p>
           <h4>UpTo 50% - 80% OFF</h4>
@@ -426,8 +566,10 @@
 
 
 
+
+
   <!-- Footer -->
-  <div class="container">
+  <div class="container" id="footer">
     <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
       <div class="col mb-3">
         <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
@@ -471,27 +613,33 @@
           </li>
           <li class="nav-item mb-2"><a href="Components\html\policy.html"
               class="nav-link p-0 text-body-secondary">Shipping Policy</a></li>
-          <li class="nav-item mb-2"><a href="Components\html\return.html" class="nav-link p-0 text-body-secondary">Returns & Exchanges</a></li>
-          <li class="nav-item mb-2"><a href="Components\html\sizeGuide.html" class="nav-link p-0 text-body-secondary">Size Guide</a></li>
+          <li class="nav-item mb-2"><a href="Components\html\return.html"
+              class="nav-link p-0 text-body-secondary">Returns & Exchanges</a></li>
+          <li class="nav-item mb-2"><a href="Components\html\sizeGuide.html"
+              class="nav-link p-0 text-body-secondary">Size Guide</a></li>
         </ul>
       </div>
 
       <div class="col mb-3">
         <h5>About Us</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="Components\html\story.html" class="nav-link p-0 text-body-secondary">Our Story</a></li>
-          <li class="nav-item mb-2"><a href="Components\html\blog.html" class="nav-link p-0 text-body-secondary">Blog</a></li>
+          <li class="nav-item mb-2"><a href="Components\html\story.html" class="nav-link p-0 text-body-secondary">Our
+              Story</a></li>
+          <li class="nav-item mb-2"><a href="Components\html\blog.html"
+              class="nav-link p-0 text-body-secondary">Blog</a></li>
         </ul>
       </div>
 
       <div class="col mb-3">
         <h5>Legal</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="Components\html\terms.html" class="nav-link p-0 text-body-secondary">Terms of Service</a></li>
-          <li class="nav-item mb-2"><a href="Components\html\privacy.html" class="nav-link p-0 text-body-secondary">Privacy Policy</a></li>
-          <li class="nav-item mb-2"><a href="Components\html\cookie.html" class="nav-link p-0 text-body-secondary">Cookie Policy</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Accessibility</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Sitemap</a></li>
+          <li class="nav-item mb-2"><a href="Components\html\terms.html" class="nav-link p-0 text-body-secondary">Terms
+              of Service</a></li>
+          <li class="nav-item mb-2"><a href="Components\html\privacy.html"
+              class="nav-link p-0 text-body-secondary">Privacy Policy</a></li>
+          <li class="nav-item mb-2"><a href="Components\html\cookie.html"
+              class="nav-link p-0 text-body-secondary">Cookie Policy</a></li>
+          
         </ul>
       </div>
     </footer>
@@ -501,7 +649,6 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
 
-  <!-- Botpress Chat Widget - Paste before </body> -->
   <script src="https://cdn.botpress.cloud/webchat/v2.4/inject.js"></script>
   <script src="https://files.bpcontent.cloud/2025/05/04/01/20250504011545-Y5ZGV0JS.js"></script>
 
